@@ -1,0 +1,154 @@
+\input{chapters/detail_sections/jira_commands.tex}
+
+\setcounter{secnumdepth}{3}
+
+\chapter{\ifenglish Cooperative Details\else รายละเอียดเกี่ยวกับการทำงาน / ผลการปฏิบัติงาน \fi}
+
+\section{\ifenglish Foundation of Fullstack\else ปรับความรู้พื้นฐานของการเป็น Fullstack\fi}
+แนวทางในการเริ่มต้นทำงานในสายงาน Fullstack จำเป็นต้องมีการศึกษาและปรับพื้นฐานความรู้ที่สำคัญเพื่อให้แน่ใจว่าพร้อมสำหรับการทำงานจริง  
+เนื่องจาก Fullstack เป็นสายงานที่มีความใหม่และมีการพัฒนาอย่างต่อเนื่องในวงการซอฟต์แวร์ โดยหัวข้อที่ได้รับมอบหมายให้ศึกษาเพื่อเตรียมความพร้อมจะประกอบด้วย
+
+\begin{itemize}
+    \item \textbf{Angular}: Framework สำหรับพัฒนา Front-end Web Application แบบ Single Page Application (SPA) ช่วยให้การจัดการ Component, Template, และ Data Binding มีประสิทธิภาพ
+    \item \textbf{Java Spring Boot}: Framework สำหรับพัฒนา Back-end Application ช่วยให้สร้าง REST API และจัดการ Business Logic ได้อย่างเป็นระบบ
+    \item \textbf{SQL Server}: ระบบฐานข้อมูลเชิงสัมพันธ์ (Relational Database) สำหรับจัดเก็บและจัดการข้อมูลของแอปพลิเคชัน
+\end{itemize}
+
+ทั้งนี้การศึกษาหัวข้อเหล่านี้มีระยะเวลาประมาณ 2-4 สัปดาห์ และในท้ายที่สุดจะต้องมีการนำเสนอสิ่งที่ได้เรียนรู้
+ให้กับพี่ ๆ ในทีมได้ฟังและประเมิณว่าพร้อมที่จะทำงานจริงหรือไม่ อย่างไรก็ตามรายละเอียดในหัวข้อย่อยต่าง ๆ หลังจากนี้จะเป็นการนำเสนอสิ่งที่ได้เรียนรู้และได้นำมาประยุกต์ใช้ในการทำงานจริง
+ส่วนหัวข้อนอกเหนือจากที่จะกล่าวถึงก็สำคัญไม่น้อยเช่นกันแต่จะข้อนำเสนอ Documentation ที่ได้ทำสรุปการเรียนรู้มาแล้วนั้นในส่วนภาคผนวก
+
+\clearpage
+\import{chapters/detail_sections}{angular.tex}
+\clearpage
+\import{chapters/detail_sections}{springboot.tex}
+\clearpage
+\import{chapters/detail_sections}{sql_server.tex}
+\clearpage
+
+\section{\ifenglish TOR\else TOR\fi}
+
+เนื่องจากการมาสหกิจศึกษาจำเป็นต้องมีการประเมินที่เข้มงวด ดังนั้นจึงได้จัดทำ TOR ขึ้นเพื่อเป็นมาตรฐานและข้อตกลงในการทำงาน  
+และประเมินผลร่วมกับบริษัทและอาจารย์ เพื่อให้มั่นใจว่างานสามารถทำได้ตามเป้าหมายของ Fullstack Project  
+
+\begin{itemize}
+    \item ทำงานในลักษณะของ Task-based โดยกำหนดจำนวนขั้นต่ำของ Task ไว้ที่ 60 tasks  
+    เนื่องจากทีม Fullstack ทำงานตามแนวทาง Agile โดยแบ่งงานเป็น Sprint  
+    ทุก Sprint จะมีการ Planning เพื่อกำหนดลำดับความสำคัญของ Task  
+    และมีการประชุม Weekly-Update ทุกวันพุธเพื่อติดตามความคืบหน้า ทำให้การทำงานมีความรอบคอบและสามารถปรับเปลี่ยนได้ตามความต้องการของ Product Owner และลูกค้า
+\end{itemize}
+ดังนั้นหัวข้อถัดไปจะเป็นการนำเสนอ Task งานที่ได้รับมอบหมายทั้งหมด เพื่อแสดงให้เห็นว่าสามารถบรรลุเป้าหมายของ TOR ได้ตามแผนงาน Agile
+
+\section{\ifenglish Responsibility Task\else งานที่ได้รับมอบหมาย\fi}
+
+สืบเนื่องจากงานที่ได้รับมอบหมายจะเป็นในลักษณะ Task งาน  
+ดังนั้นใน Section นี้จะนำเสนอ Task งานทั้งหมด พร้อมรายละเอียดของแต่ละ Task งาน  
+โดยจะแบ่งออกเป็น 3 กลุ่มหลัก ดังนี้:
+
+\begin{itemize}
+    \item \textbf{TASK}: งานพัฒนาฟีเจอร์ใหม่หรือทำงานตาม requirement ที่กำหนด
+    \item \textbf{CR (Change Request)}: งานปรับปรุงหรือปรับแก้ตามคำขอเพิ่มเติมจากผู้ใช้งานหรือ Product Owner
+    \item \textbf{DEFECT}: งานแก้ไขบัคหรือปัญหาที่เกิดขึ้นในระบบ
+\end{itemize}
+การแบ่งกลุ่ม Task ดังกล่าวช่วยให้สามารถติดตามความคืบหน้าในลักษณะ Agile ได้อย่างชัดเจน  
+และสะท้อนถึงความสามารถในการจัดการงานทั้งการพัฒนา การปรับปรุง และการแก้ไขปัญหา
+
+\subsection{\ifenglish Support Task\else งาน Support\fi}
+\begin{itemize}
+      \item \textbf{XDO-7387:} CBS-SunCBS | Destroy Dev02 resources \\
+            งานนี้จะต้อง Destroy Resource ที่อยู่ใน Dev02 ของ Sun-CBS Project เนื่องจากเกิดข้อผิดพลาดในการวางแผนการใช้งาน Resource ทำให้สิ้นเปลือง Cost โดยไม่จำเป็น ทั้งนี้การลบ resource เหล่านั้นจะต้องทำผ่าน Terraform เท่านั้นเพื่อเป็นการเก็บ State และประวัติของการสร้างและการลบ
+      \item \textbf{XDO-7389:} CBS-SunCBS Request to add role to managed identity \\
+            งานนี้สืบเนื่องมาจาก Dev Request ให้ DevOps เพิ่ม Role ในการ login เข้าใช้งานให้กับ Managed Identity เนื่องจาก Managed Identity ไม่มีสิทธิการใช้งานในส่วนที่ Dev ต้องการจึงต้องทำการเพิ่มให้ภายหลัง
+      \item \textbf{XDO-7394:} CBS-MCR | Provisioning Storage Account for Dev01 and QA01 \\
+            งานนี้จะต้องทำการ Provision Storage Account ให้กับ Dev01 และ QA01 ของ MCR Project ตาม Planing ที่ได้กำหนดไว้
+      \item \textbf{XDO-7421 | XDO-7490:} CBS-SunCBS | Request to set parameter on MySQL to Off on IaC\\
+            งานนี้จะต้องหาวิธีการในการปิด Parameter บางอย่างใน MySQL ซึ่งมีข้อจำจัดคือจะต้องทำผ่าน Terraform เท่านั้น
+      \item \textbf{XDO-7429:} Require provision the existing azure manage identity to version v.1.2.1\\
+            งานนี้เป็นงานที่ทีม Platfrom ได้เปิดการ์ดแบบด่วนเข้ามาทีม DevOps เพิ่มให้อัพเดท Module Terraform สำหรับการสร้าง Azure Manage Identity เป็น version 1.2.1 (ล่าสุด ณ ขณะนั้น) เพื่อให้สอดคล้องกับ Pipeline ใหม่ของ Platform Team ที่จะถูกนำมาใช้งาน
+      \item \textbf{XDO-7453:} CBS MCR | Request to grant db\_datareader access to the Azure Automation Account user-managed identity\\
+            งานนี้เป็นการเพิ่ม Role ให้กับ Azure Automation Account ที่ใช้งานใน MCR Project เพื่อให้สามารถอ่านข้อมูลจาก Database ได้ ซึ่ง Role นั้นก็อาศัยการใช้ Managed Identity ในการ Login นั้นหมายความว่า Managed Identity อันนี้จะต้องผ่านการเพิ่ม Login Role มาแล้วคล้ายๆกับงาน XDO-7389
+      \item \textbf{XDO-7604:} CBS-SunCBS | Provisioning Infrastructure resource for Migration-Dev1 (DEV03)\\
+            งานที่เป็นการ Provision Infrastructure ให้กับ Environment ใหม่ที่ชื่อว่า Dev03 ซึ่งหมายความว่า Resource ทุกอย่างไม่เคยมีมาก่อนและต้องทำการสร้างขึ้นมาใหม่ทั้งหมดประกอบไปด้วย
+            \begin{itemize}
+                  \item Storage Account
+                  \item Managed Identity
+                  \item Redis Cache
+                  \item Mysql flexible server
+                  \item CosmosDB
+                  \item Key vault
+            \end{itemize}
+            ซึ่ง Spec ของแต่ละรายการจะถูกกำหนดไว้ใน Jira Card นั้น ๆ และการสร้าง Resource ทุกอย่างนี้จะต้องผ่านการใช้ Terraform และจะมีลำดับการสร้างเพื่อไม่ให้เกิด Conflict ในการสร้าง Resource ดังนั้นเองงานนี้จึงต้องมีความเข้าใจและรอบคอบในการทำงาน
+      \item \textbf{XDO-7686 | XDO-7754:} CBS-SunCBS | Asssement of changing Storage account ADLS Gen2\\
+            งานนี้คือการเปลี่ยน Version ของ Storage Account จาก General ไปเป็น ADLS Gen2 ซึ่งเป็นการเปลี่ยนแปลงที่สำคัญเพื่อเพิ่มประสิทธิภาพในการใช้งานของ Storage Account โดยเฉพาะในการใช้งานในส่วนของ Data Lake ซึ่งการเปลี่ยนแปลง Version นั้นจะต้องเกิดการลบและสร้างขึ้นมาใหม่ทั้งหมดดังนั้นก่อนเริ่มดำเนินการจะต้องมีการ Approve จาก Dev ต้นทางซึ่งเป็นเจ้าของข้อมูลที่อยู่ใน Storage Account นั้น และงานลักษณะนี้จะต้องทำในหลายๆ Environment เช่นกัน
+      \item \textbf{XDO-7844:} CBS-MCR | Provisioning resource to support POC SSIS\\
+            สืบเนื่องมาจากทางทีม Dev มีเป้าหมายที่จะเปลี่ยงแปลงการ Sync ของมูลของ Database ซึ่งมีอยู่จำนวนมากทั้ง On Cloud และ On Premise ซึ่งก่อนหน้านั้นใช้ Db Sync service ที่ Azure ให้มาแต่ด้วยที่มี Database หลายตัวจึงทำให้เกิดปัญหาในการใช้งาน จึงจำเป็นต้องหา Solution ใหม่ ๆ โดยที่การใช้ SSIS ก็เป็นอีกหนึ่งวิธี ดังนั้นเอง DevOps จึงต้อง Support การสร้าง SSIS ขึ้นมา โดยที่การสร้างนั้นต้องคำนึงถึงเรื่อง Network และ Security ด้วยเนื่องจาก Database แต่ละตัวนั้นอยู่ใน Network ที่แตกต่างกันและเป็น Private Network ด้วย
+      \clearpage
+      \item \textbf{XDO-7861 | XDO-7862: } Destroy unused resource\\
+            งานนี้เป็นงานที่ต้องทำการ Destroy Resource ที่ไม่ได้ใช้งานอยู่ใน Environment ของ Project ต่าง ๆ ซึ่งเป็นเรื่องที่สำคัญในการลด Cost ของ Project และเป็นเรื่องที่ต้องทำอย่างสม่ำเสมอเพื่อไม่ให้เกิดปัญหาในการใช้งานของ Project ในอนาคต ซึ่งระหว่างการทำงานก็มีปัญหาเกิดขึ้น เรื่องจาก Terraform Provider ที่เราใช้นั้นมีการอัพเดท version ซึ่งทำให้ Module ที่เคยเขียนไว้ใน version ที่เก่ากว่าใช้งานไม่ได้ทำให้จะต้องมีการทำงานในการ Upgrade Module ที่เก่าให้ใช้งานได้กับ version ใหม่ก่อนทำการ Destroy Resource
+      \item \textbf{XDO-7909:} CBS-SunCBS | Request to add more endpoint of DFS to SunCBS storage account\\
+            สืบเนื่องจาก card XDO-7686 | XDO-7754 หลักจากที่ได้มีการอัพเกรด Storage Account ให้เป็น ADLS Gen2 แล้ว ดังนั้นจึงทำให้ความสามารถของ Storage Account นั้นเพิ่มขึ้นมาอีก นั้นจึงทำให้ private endpoint ชนิดเดิมที่มีอยู่นั้นไม่เพียงพอในการใช้งาน จึงต้องทำการเพิ่ม Endpoint ชนิด DFS เข้าไปเพื่อทำให้ใช้งาน ADLS Gen2 ได้เต็มประสิทธิภาพมากยิ่งขึ้น
+      \item \textbf{XDO-8124 | XDO-8125:} CBS-MCR | Request to provisioning Azure Resource to support SSIS on DEV01 and QA01\\
+            สืบเนื่องจาก XDO-7844 ที่ได้มาการขอให้สร้าง SSIS ขึ้นมาเพื่อ POC การทำ Data Sync ระหว่าง Database on Cloud กับ On Premise หลังจากทีม Dev ได้ลองใช้งานแล้วพบว่าสามารถใช้งานได้ดี จึงต้องการที่จะทำมาใช้งานจริง ๆ ดังนั้นจึงได้มีการของให้ทาง DevOps Provision SSIS ให้กับ Environment ที่จะใช้งานจริง ๆ คือ DEV01 และ QA01 งานนี้มองในรายละเอียดลงไปจะค่อนข้างยากเนื่องจากก่อนหน้าที่เราเคยสร้าง SSIS ขึ้นมานั้นเป็นการใช้ Username Password ในการ Login แต่ในครั้งนี้เนื่องด้วยมาตรฐานความปลอดภัยที่สูงขึ้นจึงต้องใช้ Managed Identity ในการ Login แทน จึงทำให้ต้องมีการทดลองและทดสอบความเป็นไปได้ในการทำ ซึ่งนั้นก็เป็นหน้าที่ของผมเองที่คนที่หาวิธีการใช้งาน Managed Identity ในการ Login และทำให้ SSIS สามารถใช้งานได้
+            
+\end{itemize}
+
+\clearpage
+\subsection{\ifenglish Develop Task\else งาน Develop\fi}
+\begin{itemize}
+      \item \textbf{XDO-7483 | XDO-7484:} [ADF] Convert module from IAC next gen to xplatform multicloud\\
+            งานเป็นงานที่คล้ายๆการ Restructure IaC ของการสร้าง ADF ในโปรเจค Payment Domain ใหม่ทั้งหมดเนื่องจาก Version ปัจจุบันนั้นไม่ได้แยก Module ของแต่ละ Component ของ ADF ออกจากกันซึ่งประกอบด้วย Datafactory, Linked services, Trigger และ Pipeline ส่งผลให้เมื่อมีความต้องการในแก้ไขบางอย่างจะต้องพบเจอกับ Code ประมาณ 10,000 บรรทัด ซึ่งเป็นเรื่องที่ไม่ควรจะเกิดขึ้น ทางทีม DevOps จึงเห็นว่าเรื่องนี้ควรจะแก้ไข ซึ่งงานนี้ผมได้ทำกับพี่เลี้ยงอีกคนหนึ่ง 
+            
+            โดยผมรับหน้าที่ในการ Restructure ส่วนของ Linked Services และ Trigger ซึ่งเป็นส่วนที่มีความซับซ้อนมากที่สุด โดยการ Restructure ครั้งนี้อ้างอิง Standard ของ Module จากฝั่ง SCB ที่ทาง DevOps ของ Techx เป็นผู้ Design ขึ้นมา ทั้งหมดใช้เวลาประมาณ 2 สัปดาห์ในการ Implement และ Test
+
+            ทั้งนี้งานนี้จะต้องใช้เวลาในการทำค่อนข้างจะนานเนื่องจาก PM ของโปรเจคจะต้องไปขอ Approve จาก CEO เรื่องของการสร้าง Resource ใหม่ขึ้นมาเพื่อใช้ทดสอบ Module ที่พัฒนาขึ้นมาใหม่ ซึ่งเป็นเรื่องที่ต้องใช้เวลาในการรออย่างมาก หลังจากนั้นก็จะเป็นหน้าที่ของทีม Dev เองที่จะต้อง Migrate Config ต่างๆที่อยู่ใน Module เก่าไปยัง Module ใหม่ เมื่อเป็นแบบนั้นแล้วงานของ DevOps หลังจากที่พัฒนา Module เสร็จแล้วก็ยังต้องคง Support Dev ในการ Migrate อีกด้วย ด้วยเหตุนี้เองจึงใช้เวลาค่อนข้างนาน
+      \item \textbf{XDO-7561 | XDO-7737 | XDO-7742:} CBS-DAP | Enhance Azure Data factory linked services modules\\
+            งานนี้เป็นการเพิ่มความสร้างมาของ SFTP Linked Services ใน ADF Modole ของ SCB ให้สามารถไปดึงรหัสผ่านของ SFTP server จาก Azure keyvault ได้ โดยที่ไม่ต้องใส่รหัสผ่านลงใน Config ของ ADF โดยตรง ซึ่งเป็นเรื่องที่สำคัญในการเพิ่มความปลอดภัยในการใช้งานของ ADF และเป็นการเพิ่มความสะดวกในการใช้งานด้วย
+
+            หลังจาก Enhance ฝั่ง Module หลักไปแล้วก็ต้องไปแก้ไข Catalog ที่เรียกใช้ Module ให้รองรับการใช้งาน Feature นี้ได้เช่นกันโดย Catalog จะเป็นฝั่ง Techx ที่รับหน้าที่ดูแลให้
+
+            ทั้งนี้การที่เรา Develop Module เช่นเพิ่ม Feature ใหม่เข้ามาจะต้องมีการทำ Documentation ของวิธีการใช้ Module นั้นขึ้นมางานนี้ก็เช่นกันผมต้องทำ Documentation เพื่อสอนการใช้งาน SFTP Linked Services ที่ผมได้พัฒนาขึ้นมา ซึ่ง Document จะต้องเป็นภาษาอังกฤษ เนื่องจากมีทีมพัฒนาที่เป็นต่างชาติอยู่ใน Project นี้ด้วย
+      \item \textbf{XDO-7633:} [PYMD] Develop check appconfig for Azure Databrick\\
+            งานนี้เเป็นความต้องการจาก Dev ที่มีปัญหาก่อนการ Deploy Production ว่าต้องการ Jenkins Pipeline ซักตัวหนึ่งที่ใช้ในการ Check Config ของ Microservcice ใน Release นั้น ๆ ที่กำลังจะ Deploy ว่าได้มีการ Config ถูกต้องหรือไม่ โดยที่ Config ที่ต้องการ Check นั้นจะเป็น Config ที่เกี่ยวข้องกับ Azure Databrick ซึ่งเป็น Service ที่ใช้ในการทำงานกับ Big Data ซึ่ง Config file นั้นมีอยู๋หลากหลายรูปแบบไม่ว่าจะเป็น YAML, JSON ซึ่งนั้นก็เป็นความถ้าทายของผมที่จะต้องทำให้ Check ได้ทุกรูปแบบไฟล์ โดยที่ Logic การเช็คจะเขียนด้วย Python และจะต้องทำงานผ่าน Jenkins ดังนั้นก็จะต้องมีการเขียน Jenkins Pipelien ขึ้นมาด้วยนั้นเอง
+
+            ผลลัพธ์จากการทำงานของ Jenkins Pipeling อันนี้จะช่วยในการตรวจสอบข้อผิดพลาดของ Dev ก่อนที่จะมีการ Deploy Microservcice เนื่องจากจะทำการ Check ที่ขาดหายไปหรือแม้กระทั้งความแตกต่างระหว่าง Config ของ 2 Environment ที่จะ Deploy ด้วยกัน
+      \item \textbf{XDO-7880:} Fix wrong variable and IAC definition to ADF Trigger catalog\\
+            เนื่องจากในแต่ละ Terraform Module นั้นจะต้องมีการเขียน Documentation ของ Module นั้นๆ ปัญหาที่เจอก็คือ Module มีการ Update ไปมากแล้วแต่ Documentation ไม่ได้ Update ตามไปจึงทำให้ผู้ที่ใช้งาน Module เกิดความสับสนในการใช้งาน ซึ่งงานนี้จึงเป็นการ Update Documentation ของ Module ให้สอดคล้องกับ Module ที่ Update ล่าสุด
+      \item \textbf{XDO-7921:} Fix bug ADF catalog issue can't provision with user managed identity\\
+            งานนี้เป็นการค้นหา Bug ที่ทำให้การพัฒนา Catalog ที่ทำการเรียกใช้ Module กลางของ CCOE นั้นไม่สามารทำการ terratest (Unit test ของ Terraform) ได้ สาเหตุก็เนื่องมาจากการปรับเปลี่ยนการใช้งานของ Catalog ที่ไม่สอดคล้องกับ Module หลัก
+      \item \textbf{XDO-7930:} Update ADF trigger document align with SCB requirement\\
+            อัพเดท Document ของ ADF Trigger ให้สอดคล้องกับ Requirement ของ SCB เนื่องจากหลังการประชุมได้มีการตกลง standard ของการ Deploy trigger ขึ้นมาใหม่
+      \item \textbf{XDO-7940:} Update ADF trigger document align with SCB requirement\\
+            สืบเนื่องจากการ์ดหมายเลข XDO-7483 และ XDO-7484 หลังจากที่พัฒนา Terraform Module เหล่านั้นเสร็จสิ้น ต่อมาก็จะเป็นการเริ่มทำ migration เพื่อย้ายมาใช้ของใหม่แทนที่ของเดิมที่มีปัญหาเรื่องความยากในการจัดการ
+\end{itemize}
+
+\clearpage
+\subsection{\ifenglish POC\else งาน Prove Of Concept\fi}
+\begin{itemize}
+      \item \textbf{XDO-7423:} POC ADF Storage Event Trigger Over SFTP\\
+            งานนี้ทางทีม Dev ได้ถามาทางทีม DevOps มาว่า Trigger ชนิด Blob Event trigger ใน ADF นั้นสามารถ trigger เมื่อมี File อัพโหลดผ่าน SFTP เข้าไปได้หรือไม่ ซึงผมเองได้รับหน้าที่ในการหาคำตอบเรื่องนี้จีงได้ตอบมาว่า สามารถทำงานได้แต่ไม่ใช่ Solution ที่ทาง Microsoft ให้มา แต่จะเป็นการ Custom Header Parameter บางตัวเข้าไปใน Trigger เพื่อทำให้ Trigger เองสามารถตรวจจับ Event ที่มาจาก SFTP ได้
+
+            โดยที่ Concept ของการแก้ปัญหานี้คือต้องออกจากกรอบ limitation ของ Trigger ที่มีอยู่ใน ADF ที่จะ Detect เมื่อมีไฟล์อัพโหลดจาก Azure Portal และจาก Storage API เท่านั้น นั้นหมายความว่าเมื่ออัพโหลดผ่าน SFTP จะไม่สามารถ Detect ได้ ผมจึงใช้วิธีการตรวจจับ Connection ที่เข้ามาจาก SFTP Protocal โดยแก้ไข Accept Header Parameter ให้ตรวจจับ Event ที่มาจาก Connection ของ SFTP ด้วย การแก้ปัญหาแบบนี้จึงทำให้ Trigger สามารถทำงานได้ตามที่ Dev ต้องการ
+      \item \textbf{XDO-7743:} CBS-SunCBS | Research on Entra ID with CosmosDB for PostgreSQL\\
+            งานนี้เป็น Research หาข้อมูลและวิธีการใช้งาน Feature ใหม่ของ Cosmos DB ที่ทาง Microsoft ปล่อยออกมาให้ได้ใช้งาน โดยที่ Feature หลักๆนั้นคือการทำให้ Entra ID ภายใน Azure สามารถที่จะ Connect กับ Cosmos DB ที่ใช้เป็น PostgreSQL ได้ ซึ่งเป็น Feature ที่สำคัญในการทำงานกับ Database ที่มีขนาดใหญ่ เพราะหากสามารถปรับใช้กับโปรเจคได้จะทำให้การทำงานง่ายมากยิ่งขึ้นไม่จำเป็นต้องใช้ Username และ Password ในการเชื่อมต่อกับ Database อีกต่อไป
+      \item \textbf{XDO-7744 | XDO-7760:} [CBS] | POC Dynamic create trigger via ARM Template and Documentation\\
+            งานนี้เป็นการหาวิธีการแก้ไขปัญหาให้กับทาง DevOps ของ SCB โดยปัญหาคือทางทีมของ SCB ไม่ต้องการที่จะใช้ Terraform ในการ Manage Trigger ของ ADF และเลิอกที่จะใช้ ARM Template แทน ด้วยเหตุนี้เองผมซึ่งดูแลงานนี้จึงต้องทำการหาวิธีการในการสร้าง Trigger ให้กับ ADF ผ่าน ARM Template และจะต้องทำ Documentation ของวิธีการใช้งานด้วย และผลลัพธ์ออกมาเป็นสิ่งที่น่าพึงพอใจทำให้วิธีการนี้ถูกนำไปเป็น Standart ให้กับหลายๆโปรเจคสืบต่อไปอย่างเช่น Payment Domain Project ก็จะใช้วิธีการนี้ในการสร้าง Trigger ของ ADF ด้วย
+      \item \textbf{XDO-7784:} POC about dataset reference to use in ADF pipeline.\\
+            สืบเนื่องจาก XDO-7744 ทางทีมที่ได้ลองใช้งานก็เกิดคำถามขึ้นมาว่าหากใช้งาน ARM Template ในการ Deploy Component อื่น ๆ ของ ADF ได้ไหม โดยที่ตัวหลักๆที่ต้องการใช้งานนั้นคือ Dataset ซึ่ง Dataset นั้นจะต้องมีการ Reference กับ Linked Services ที่เป็น Config ของการเชื่อมต่อกับ Data Source ดังนั้นงานนี้จึงเป็นการหาวิธีการในการสร้าง Dataset ที่สามารถ Reference กับ Linked Services ได้โดยที่ไม่ต้องใส่ Config ของ Linked Services ลงใน Dataset โดยตรง ซึ่งเป็นเรื่องที่สำคัญในการทำงานของ ADF ที่มีขนาดใหญ่
+      \item \textbf{XDO-7949:} CBS-MCR | Request to test provisioning SSIS with UMI\\
+            เนื่องจาก Project Manager ของ CBS Project ต้องการวิธีการในการทำงานกับ SSIS ที่ต้องใช้ User Managed Identity ในการ Login แทนการใช้ Username และ Password ซึ่งเป็นเรื่องที่สำคัญในการทำงานกับ Database ที่มีขนาดใหญ่ ดังนั้นงานนี้จึงเป็นการทดสอบการใช้งาน SSIS ที่ใช้ User Managed Identity ในการ Login โดยที่การทดสอบนั้นจะต้องทำการเชื่อมต่อกับ Database ที่อยู่ใน Private Network ด้วย
+\end{itemize}
+
+\section{\ifenglish Benefit\else สวัสดิการที่ได้รับ\fi}
+บริษัท G-Able ให้ความสำคัญกับเรื่องของสวัสดิการที่ดีให้กับพนักงาน โดยเฉพาะนักศึกษาสหกิจศึกษาที่เข้ามาทำงานในบริษัท
+ถึงแม้จะไม่ได้เป็นพนักงานประจำ แต่ก็ได้รับสวัสดิการที่ดีจากบริษัทอย่างเช่น
+\begin{itemize}
+      \item ทำงาน 5 วัน / สัปดาห์ ทำงานแบบ Work from home \\(09:00 - 18:00)
+      \item เบี้ยเลี้ยงในการทำงาน 500 บาท / วันทำงาน (ไม่นับวันลา หรือวันหยุด)
+      \item วันหยุดประจำปีตามประเทศไทย และวันหยุดพิเศษตามประเทศไทย
+\end{itemize}
+ทั้งนี้ทั้งหมดหมดที่กล่าวมาเป็นเพียงส่วนหนึ่งของสวัสดิการที่ได้รับจากบริษัท G-Able และยังมีสวัสดิการอื่น ๆ ที่ยังไม่ได้กล่าวถึง
+
+\section{วัฒนธรรมองค์กร}
+บริษัท จีเอเบิล จำกัด (มหาชน) ตระหนักถึงความสำคัญของการมีระบบการกำกับดูแลกิจการที่ดี ซึ่งเป็นสิ่งสำคัญที่จะช่วยส่งเสริมการดำเนินงานของบริษัทให้มีประสิทธิภาพ และมีการเจริญเติบโตอย่างยั่งยืน
+
+\clearpage

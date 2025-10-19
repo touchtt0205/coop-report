@@ -1,0 +1,16 @@
+\subsection{Java Spring Boot}
+Spring Boot คือเฟรมเวิร์กที่ได้รับความนิยมสูงสำหรับภาษา Java (ภาษาโปรแกรมมิ่ง) ซึ่งออกแบบมาเพื่อช่วยให้นักพัฒนาสามารถ สร้างแอปพลิเคชันบนฝั่งเซิร์ฟเวอร์ (Backend) ได้อย่างรวดเร็ว และง่ายดาย โดยเฉพาะอย่างยิ่งการสร้าง RESTful APIs และ Microservices\
+
+\textbf{คุณสมบัติเด่นของ Spring Boot}
+\begin{itemize}
+    \item Auto-Configuration: Spring Boot จะตั้งค่าเริ่มต้นที่จำเป็นให้กับโปรเจกต์โดยอัตโนมัติ ทำให้ลดการเขียนโค้ดและไฟล์ตั้งค่า (Configuration) ที่ซ้ำซ้อนลงไปมาก
+    \item Stand-alone Applications: สามารถรันแอปพลิเคชันได้โดยตรงด้วยตัวมันเอง เนื่องจากมี Embedded Server (เช่น Tomcat หรือ Jetty) ติดมาให้ด้วย ไม่จำเป็นต้องติดตั้งหรือตั้งค่าเซิร์ฟเวอร์ภายนอก
+    \item Starter Dependencies: มีชุด Dependencies สำเร็จรูป (Starters) ที่ช่วยในการรวมไลบรารีที่เกี่ยวข้องกันเข้าด้วยกัน (เช่น spring-boot-starter-web สำหรับการสร้างเว็บแอปพลิเคชัน) ทำให้จัดการ Dependency ได้ง่ายขึ้น
+\end{itemize}
+
+\textbf{บริบทของ Spring Boot ใน Fullstack Development}
+\begin{itemize}
+    \item สร้าง RESTful APIs ซึ่งเป็นช่องทางสื่อสารมาตรฐาน โดยส่งและรับข้อมูลในรูปแบบ JSON
+    \item Spring Boot ทำหน้าที่จัดการ Business Logic ทั้งหมด เช่น การคำนวณ การตรวจสอบสิทธิ์ (Security) และการประมวลผลข้อมูล
+    \item จัดการการเชื่อมต่อและโต้ตอบกับ Database (เช่น MySQL, PostgreSQL, MongoDB) โดยมักใช้ร่วมกับ Spring Data JPA/Hibernate
+\end{itemize}

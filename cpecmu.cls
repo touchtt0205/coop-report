@@ -166,7 +166,7 @@
 \newcommand{\@projectNo}{??}
 \newcommand{\projectNo}[1]{\renewcommand{\@projectNo}{#1}}
 
-\newcommand{\@titleTH}{ชื่อโครงงาน}
+\newcommand{\@titleTH}{ชื่อรายงาน}
 \newcommand{\@titleEN}{Project Name}
 \newcommand{\titleTH}[1]{\renewcommand{\@titleTH}{#1}}
 \newcommand{\titleEN}[1]{\renewcommand{\@titleEN}{#1}}
@@ -207,8 +207,8 @@
   \@listauthors{EN}{#1}{#2}%
 }
 
-\newcommand{\@acadyearBE}{2563}
-\newcommand{\@acadyearAD}{2020}
+\newcommand{\@acadyearBE}{2568}
+\newcommand{\@acadyearAD}{2025}
 \newcounter{@acadyear}
 \newcommand{\acadyear}[1]{%
   \renewcommand{\@acadyearAD}{#1}
@@ -239,13 +239,23 @@
 \newcommand{\@maketitleTH}{%
   \begin{titlepage}%
     \begin{center}%
-      \hrule height 0.5in width 0pt % force vertical space at top
+      % \hrule height 0.5in width 0pt % force vertical space at top
+      \begin{figure}[ht]
+        \begin{center}
+            \includegraphics[scale=1]{images/cmu.png}
+        \end{center}
+      \end{figure}
       \@titlesize\bf
-      โครงงานเลขที่ \@degreefieldAbbrTH~\@projectNo/\@acadyearBE
+      % รายงานเลขที่ \@degreefieldAbbrTH~\@projectNo/\@acadyearBE
+      รายงานการปฏิบัติงานสหกิจศึกษา
       \par\vspace*{0.5in}\par
       เรื่อง
       \par\vspace*{0.5in}\par
       \@titleTH
+      \par\vspace*{0.5in}\par
+      ณ บริษัท จีเอเบิล จำกัด (มหาชน)\\
+      127/30 อาคารปัญจธานี ชั้น 25 \\
+      ถนนนนทรี แขวงช่องนนทรี เขตยานนาวา กรุงเทพมหานคร 10120
       \par\vspace*{0.75in}\par
       โดย
       \par\vspace*{0.75in}\par
@@ -256,10 +266,11 @@
       }%
       \vfill
       \ifproject%
-        โครงงานนี้ \\
-        เป็นส่วนหนึ่งของการศึกษาตามหลักสูตรปริญญาวิศวกรรมศาสตรบัณฑิต \\
+        % รายงานนี้ \\
+        % เป็นส่วนหนึ่งของการศึกษาตามหลักสูตรปริญญาวิศวกรรมศาสตรบัณฑิต \\
+        รายงานนี้เป็นส่วนหนึ่งของกระบวนวิชา 261495 สหกิจศึกษา \\
       \else%
-        รายงานนี้เป็นส่วนหนึ่งของวิชาสำรวจเพื่อโครงงาน \\
+        รายงานนี้เป็นส่วนหนึ่งของวิชาสำรวจเพื่อรายงาน \\
         ตามหลักสูตรปริญญาวิศวกรรมศาสตรบัณฑิต \\
       \fi
       ภาควิชาวิศวกรรมคอมพิวเตอร์ \\
@@ -272,11 +283,20 @@
 \newcommand{\@maketitleEN}{%
   \begin{titlepage}%
     \begin{center}%
-      \hrule height 0.5in width 0pt % force vertical space at top
+      % \hrule height 0.5in width 0pt % force vertical space at top
+      \begin{figure}[ht]
+        \begin{center}
+            \includegraphics[scale=1]{images/cmu.png}
+        \end{center}
+      \end{figure}
       \@titlesize\bf
-      PROJECT No. \@degreefieldAbbrEN~\@projectNo/\@acadyearBE
+      % PROJECT No. \@degreefieldAbbrEN~\@projectNo/\@acadyearBE
+      Cooperative Education Report
       \par\vspace*{1in}\par
       \@titleEN
+      \par\vspace*{0.5in}\par
+      127/30 Panjathani Tower, 25th Floor,\\
+      Nonsi Road, Chong Nonsi Subdistrict, Yan Nawa District, Bangkok 10120
       \par\vspace*{1.5in}\par
       {\@authorsize%
       \begin{tabular}{@{}cl@{}}
@@ -285,16 +305,17 @@
       }%
       \vfill
       \ifproject%
-        A Project Submitted in Partial Fulfillment of Requirements \\
-        for the Degree of Bachelor of Engineering \\
+        % A Project Submitted in Partial Fulfillment of Requirements \\
+        % for the Degree of Bachelor of Engineering \\
+        This report is part of the course 261495 Cooperative Education \\
       \else%
         A Report Submitted in Partial Fulfillment of Project Survey Course \\
         as Required by the Degree of Bachelor of Engineering \\
       \fi
       Department of Computer Engineering \\
-      Faculty of Engineering \\
-      Chiang Mai University \\
-      \@acadyearAD
+      Faculty of Engineering, Chiang Mai University \\
+      Academic Year~\@acadyearAD
+      % \@acadyearAD
     \end{center}
     \vspace{0.25in}
   \end{titlepage}
@@ -378,7 +399,7 @@
 \newcommand{\@summaryTH}{%
   \setlength\parindent{0pt}
   \begin{tabularx}{\linewidth}{@{}l@{\quad: }X@{}}
-    หัวข้อโครงงาน & \@titleTH \\
+    หัวข้อรายงาน & \@titleTH \\
     & \@titleEN \\
     โดย &
     \begin{tabular}[t]{@{}ll@{}}
@@ -397,14 +418,14 @@
 \newcommand{\@summaryEN}{%
   \setlength\parindent{0pt}
   \begin{tabularx}{\linewidth}{@{}l@{\quad: }X@{}}
-    Project Title & \@titleEN \\
+    Report Title & \@titleEN \\
     Name &
     \begin{tabular}[t]{@{}ll@{}}
       \@authorsEN{& }{\\}
     \end{tabular}
     \\
     Department & Computer Engineering \\
-    Project Advisor & \@advisorEN \\
+    Report Advisor & \@advisorEN \\
     Degree & Bachelor of Engineering \\
     Program & \@degreefieldEN \\
     Academic Year & \@acadyearAD
@@ -426,7 +447,7 @@
   \par\vspace*{1cm}\par
   \ifcpe%
     ภาควิชาวิศวกรรมคอมพิวเตอร์ คณะวิศวกรรมศาสตร์ มหาวิทยาลัยเชียงใหม่
-    ได้อนุมัติให้โครงงานนี้เป็นส่วน\-หนึ่งของการศึกษาตามหลักสูตรปริญญาวิศวกรรมศาสตรบัณฑิต
+    ได้อนุมัติให้รายงานนี้เป็นส่วน\-หนึ่งของการศึกษาตามหลักสูตรปริญญาวิศวกรรมศาสตรบัณฑิต
     (สาขา\@degreefieldTH)
   \else%
     The Department of Computer Engineering, Faculty of Engineering,
@@ -435,27 +456,31 @@
   \fi
   \begin{flushright}
     \begin{tabular}{@{}cl@{}}
-      \\[1cm]
+      \\[0.5cm]
+      \makebox[3.5in]{\dotfill} &
+        คณบดีคณะวิศวกรรมศาสตร์ \\
+      (รองศาสตราจารย์.ดร.ธงชัย ฟองสมุทร)
+      \\[1.5cm]
       \makebox[3.5in]{\dotfill} &
         \ifcpe หัวหน้าภาควิชาวิศวกรรมคอมพิวเตอร์\else Department chair\fi\\
       (\ifcpe\@deptChairTH\else\@deptChairEN\fi)
     \end{tabular}
   \end{flushright}
   \par\bigskip\par
-  \ifcpe คณะกรรมการสอบโครงงาน\else Project examination committee:\fi
+  \ifcpe คณะกรรมการสอบรายงาน\else Project examination committee:\fi
   \begin{flushright}
     \begin{tabular}{@{}cl@{}}
       \\[1cm]
-      \makebox[3.5in]{\dotfill} &
-        \ifcpe ประธานกรรมการ\else Main advisor / Chair\fi \\
-      (\ifcpe\@advisorTH\else\@advisorEN\fi)
-      \setcounter{@committeeIdx}{0}%
-      \@listcommittee{\ifcpe TH\else EN\fi}{\\[1cm]
-        \makebox[3.5in]{\dotfill} & \ifcpe กรรมการ\else Committee member\fi \\
-        (}
-      {)}%
+      \makebox[3.5in]{\dotfill} & \ifcpe อาจารย์ที่ปรึกษาสหกิจศึกษา\else Main advisor / Chair\fi \\
+      % (\ifcpe\@advisorTH\else\@advisorEN\fi)
+      (รศ.ดร.ปฏิเวธ วุฒิสารวัฒนา)\\
+      \\[1cm]
+      \makebox[3.5in]{\dotfill} & พนักงานที่ปรึกษา \\
+      (ไชยา แสงจันทร์)\\
+      (System Analyst)
+      \\[1cm]
     \end{tabular}
-  \end{flushright}
+\end{flushright}
   \egroup
 }
 \newcommand\@abstract@begin[2]{%

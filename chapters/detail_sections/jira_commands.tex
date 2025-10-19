@@ -1,0 +1,52 @@
+% Define groups of JIRA cards
+\newcommand{\supportJiraCards}{
+  XDO-7387 & CBS-SunCBS | Destroy Dev02 resources \\
+  XDO-7389 & CBS-SunCBS Request to add role to managed identity \\
+  XDO-7394 & CBS-MCR | Provisioning Storage Account for Dev01 and QA01 \\
+  XDO-7421 & CBS-SunCBS | Request to set parameter on MySQL to Off on IaC \\
+  *XDO-7422 & CBS-DAP | Setup ADF to send diagnostic log to DAP log analytic workspace \\
+  XDO-7429 & Require provision the existing azure manage identity to version v.1.2.1 \\
+  *XDO-7444 & CBS-SunCBS Request to install teleport for MySQL flexible servers \\
+  XDO-7453 & CBS MCR | Request to grant db\_datareader access to the Azure Automation Account user-managed identity \\
+  XDO-7490 & CBS-SunCBS | setup Mysql parameter on QA01 \\
+  XDO-7604 & CBS-SunCBS | Provisioning Infrastructure resource for Migration-Dev1 (DEV03) \\
+  XDO-7686 & CBS-SunCBS | Asssement of changing Storage account ADLS Gen2 \\
+  XDO-7745 & CBS-SunCBS | Change storage account from General to ADLS Gen2 on Dev01 \\
+}
+
+\newcommand{\developJiraCards}{
+  XDO-7423 & POC ADF Storage Event Trigger Over SFTP
+  XDO-7483 & [ADF][linked-services] Convert module from IAC next gen to xplatform multicloud \\
+  XDO-7484 & [ADF][trigger] Convert module from IAC next gen to xplatform multicloud \\
+  XDO-7561 & CBS-DAP | Enhance Azure Data factory linked services modules \\
+  XDO-7633 & [PYMD] Develop check appconfig for Azure Databrick \\
+  XDO-7737 & [CBS] Update linked service catalog to support custom sftp \\
+  XDO-7742 & [CBS] Create Linked Services documentation \\
+  XDO-7743 & CBS-SunCBS | Research on Entra ID with CosmosDB for PostgreSQL \\
+  XDO-7744 & [CBS] | POC Dynamic create trigger via ARM Template\\
+  XDO-7760 & [CBS] Make the ADF dynamic trigger document \\
+  
+  XDO-7784 & POC about dataset reference to use in ADF pipeline.
+}
+
+% Create a table of JIRA cards with hyperlinks
+\newcommand{\jiradata}{
+  \begin{center}
+    \begin{tabular}{|c|p{0.7\textwidth}|}
+      \hline
+      \multicolumn{1}{|c|}{\textbf{รหัส Jira Card}} & \multicolumn{1}{c|}{\textbf{หัวข้องาน}} \\
+      \hline
+      \multicolumn{2}{|c|}{\textbf{Support Cards}}                                         \\
+      \hline
+      \supportJiraCards
+      \hline
+      \multicolumn{2}{|c|}{\textbf{Develop Cards}}                                         \\
+      \hline
+      \developJiraCards
+      \hline
+    \end{tabular}
+  \end{center}
+}
+
+% Helper command to create hyperlinks
+\newcommand{\jiralink}[1]{\hyperref[desc:#1]{\texttt{#1}}}
