@@ -1,0 +1,14 @@
+\subsection{FA-AR Module}
+
+\subsubsection{Defect}
+\begin{itemize}
+    \setlength\itemsep{1em}
+    \item \textbf{\jiralink{GISLOCK-5808 [FA-AR][ใบนัดรับเงิน] Appointment Information กรณีเปลี่ยน Page ที่ไม่ใช่ 1 ระบบเรียงลำดับข้อมูลไม่ถูกต้อง}} \\
+          เกิดจากการที่หลังบ้านไม่ได้เขียน SQL เพื่อเรียงข้อมูล เลยทำให้ตอนที่เรากดไปหน้าใหม่ข้อมูลมันเลยเรียงไม่ถูกต้อง
+    \item \textbf{\jiralink{GISLOCK-5432 [FA-AR][ใบนัดรับเงิน] Appointment No wording ผิด}} \\
+          งานนี้เราแก้แค่ wording เป็น Appointment No.     
+    \item \textbf{\jiralink{GISLOCK-5424 [FA-AR][Appointment List] placeholder wording ผิด}} \\
+          งานนี้เป็นการปรับ placeholder เป็นคำใหม่ 'Client Code/Client Group/Bill Statement No '
+    \item \textbf{\jiralink{GISLOCK-5622 [FA-AR][New ใบนัดรับเงิน] ชื่อคอลัมน์ PaymentDueDate ไม่เว้นวรรค}} \\
+          งานนนี้เป็นงานแก้การเว้นวรรคำ จาก 'PaymentDue Date' เป็น 'Payment Due Date'
+\end{itemize}

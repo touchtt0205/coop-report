@@ -37,6 +37,9 @@
 \usepackage{longtable}
 \usepackage{array}
 \usepackage{tabularx}
+\usepackage{etoolbox}
+\usepackage{changepage}
+\usepackage{mdframed}
 
 %% Some other useful packages. Look these up to find out how to use
 %% them.
@@ -85,6 +88,7 @@
 
 \include{chapters/intro}
 \include{chapters/detail}
+\include{chapters/summary}
 % \include{chapters/background}
 % \include{chapters/approach}
 % \include{chapters/eval}
@@ -97,7 +101,7 @@
 \ifproject
 \normalspacing
 \appendix
-\include{chapters/appendix}
+% \include{chapters/appendix}
 
 %% Display glossary (optional) -- need glossary option.
 \ifglossary\glossarypage\fi
