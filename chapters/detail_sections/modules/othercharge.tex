@@ -3,152 +3,223 @@
 \subsubsection{Task}
 \begin{itemize}
     \setlength\itemsep{1em}
-    \item \textbf{\jiralink{GISLOCK-5943 [FA-Other charge request] จัดทำหน้าจอ Other charge request}} \\
-          เป็นการเพิ่มโปรแกรมใหม่ในแผนกของการเงิน โดยการเป็นสรา้งโปรแกรมที่ชื่อว่า Other Charge Request และ Other Charge Request List\\
+    \item \textbf{{GISLOCK-5943 [FA-Other charge request] จัดทำหน้าจอ Other charge request}} \\
+          เป็นการเพิ่มโปรแกรมใหม่ในแผนกของการเงิน โดยการเป็นสร้างโปรแกรมที่ชื่อว่า Other Charge Request และ Other Charge Request List\\
           Other Change Request : เป็นโปรแกรมเกี่ยวกับการเรียกค่าใช้จ่ายเพิ่มเติมนอกเหนือจากเบี้ยประกัน \\
           Other Change Request List : เป็นหน้าที่เอาไว้รายการที่เราสร้างไว้
-    \item \textbf{\jiralink{GISLOCK-6518 [FA- Other charge request] ปรับ feature ทำหน้าจอ Other charge request}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-6694 [OTC][Request OTC] ปรับการแสดงส่วน Invoice 1.Invoice Name 2.Invoice Address 3.Invoice Date}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-6755 [Set up Transaction Code] เพิ่มหน้าจอ Set up Transaction Code}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-7019 [Other Charge] เพิ่มปุ่ม Update (สำหรับ Refresh) ข้อมูล Installment และ ShareDept}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-7106 [Other Charge] แก้ไขโปรแกรม Other charge Request List เพิ่มเงื่อนไขในการ query เพื่อค้นหาข้อมูลโดยกรองเฉพาะ Entry\_by ที่ตรงกับ User Login}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-7200 [Other Charge] แก้ไขโปรแกรม Charge Request ส่วนของการ Share dept \, Installment}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-7289 [Other Charge] Set up Transaction Code เพิ่ม DropdownFlag}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-7617 [Other Charge] ปรับชื่อฟิลด์ ในหน้าจอ และ DB}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-7688 [Other Charge] Other Charge Request Booking}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-7689 [Other Charge] Other Charge Request บันทึกขาคู่}} \\
-          description
+    \item \textbf{{GISLOCK-6755 [Set up Transaction Code] เพิ่มหน้าจอ Set up Transaction Code}} \\
+          เป็นการเพิ่มโปรแกรมใหม่ที่เราจะเแาไว้ตั้งค่ารายการ Transaction Code ที่จะใช้ในโปรแกรม Other Charge Request กับ Other Expense Request \\
+          โดยจะแบ่ง 2 โปรแกรมคือ Set up Transaction Code และ Set up Transaction Code List 
+    \item \textbf{{GISLOCK-7019 [Other Charge] เพิ่มปุ่ม Update (สำหรับ Refresh) ข้อมูล Installment และ ShareDept}} \\
+          เป็นการเพิ่มปุ่ม Update ในหน้าจอ Other Charge Request เพื่อให้ผู้ใช้สามารถกดปุ่มนี้เพื่อรีเฟรชข้อมูลในตาราง Installment และ Share Department ได้ แบบอัตโนมัติ
+    \item \textbf{{GISLOCK-7106 [Other Charge] แก้ไขโปรแกรม Other charge Request List เพิ่มเงื่อนไขในการ query เพื่อค้นหาข้อมูลโดยกรองเฉพาะ Entry\_by ที่ตรงกับ User Login}} \\
+          เป็นการแก้ไขโปรแกรม Other Charge Request List โดยเพิ่มเงื่อนไขในการค้นหาข้อมูลให้สามารถกรองเฉพาะ Entry\_by ที่ตรงกับ User Login นั้น ๆ ได้ \\
+          อนาคตจะแบ่งให้แสดงแค่แผนกที่ตัวเองรับผิดชอบ
+    \item \textbf{{GISLOCK-7200 [Other Charge] แก้ไขโปรแกรม Charge Request ส่วนของการ Share dept \, Installment}} \\
+          ปรับการแสดงข้อความเตือน เมื่อมีการกรอกข้อมูลไม่ครบถ้วนในส่วนของ Share Department และ Installment \\
+          โดยจะมีการเช็คให้ข้อมูลของ Installment และ Share Department ต้องมีค่าเปอร์เซ็นต์รวมกันเท่ากับ 100\% ถึงจะสามารถบันทึกข้อมูลได้ \\
+          และจะต้องมีจำนวนเงินที่สัมพันต์กับจำนวนเงินใน Transaction ด้วย
+    \item \textbf{{GISLOCK-7289 [Other Charge] Set up Transaction Code เพิ่ม DropdownFlag}} \\
+          เป็นการเพิ่มตัวเลือก DropdownFlag ในหน้าจอ Set up Transaction Code \\
+          เพื่อให้ผู้ใช้สามารถเลือกได้ว่ารายการ Transaction Code ที่สร้างขึ้นมานั้น จะนำไปแสดงในหน้าจอ Other Charge Request หรือไม่
+    \item \textbf{{GISLOCK-7688 [Other Charge] Other Charge Request Booking}} \\
+          เป็นการเพิ่มโปรแกรมในส่วนของแผนกการเงิน เป็นโปรแกรมที่แผนกการเงินจะเอาไว้ตรวจสอบหรือแก้ไขรายการที่ถูกอนุมัติแล้ว \\
+          โดยจะมีการแยกเป็น 2 โปรแกรมคือ Other Charge Booking และ Other Charge Booking List
+    \item \textbf{{GISLOCK-7689 [Other Charge] Other Charge Request บันทึกขาคู่}} \\
+          เป็นส่วนหนึ่งของโปรแกรม Other Charge Request ที่เพิ่มขึ้นมา \\
+          โดยจะเป็นการบันทึกข้อมูลแบบขาคู่ คือการที่เราจะต้องบันทึกข้อมูลทั้งในฝั่งของ Other Charge Request และ Other Expense Request พร้อมกัน \\
+          โดยจะมี 2 แบบ คือ : \\
+            1. แบบ auto ที่จะสร้าง Other Expense Request ให้อัตโนมัติเมื่อมีการบันทึก Other Charge Request \\
+            2. แบบ manual ที่จะให้ผู้ใช้เป็นคนเลือกว่าจะสร้าง Other Expense Request ด้วยตัวเอง
 \end{itemize}
 
 \subsubsection{Defect}
 \begin{itemize}
     \setlength\itemsep{1em}
-    \item \textbf{\jiralink{GISLOCK-5457 [Other Charge] ปรับการแสดงผลข้อมูลในส่วน Bill to ให้ไปในทางเดียวกับ AP}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-6189 [Other Chare/Expense]Standard Search Search like เวลาเก็บ Data ใน DB ให้คั่นด้วย Space Bar}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-6561 [Other Charge] Pop up \: Bill To แสดงข้อมูลเดียวกัน ซ้ำๆ}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-6563 [Other Charge] Contact Information จะต้องดึงข้อมูลมาจาก Contact Person ของ Client หรือ Partner มาแสดงโดย link up กับ Bill to ที่ได้เลือก}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-6566 [Other Charge] ปรับ wording ของชื่อฟิลด์ ทั้งหน้า Request และ List}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-6568 [Other Charge] ตรวจสอบการ Save Draft ใบงานและการแสดงค่าเริ่มต้นฟิลด์ Status}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-6571 [Other Charge] ส่วน Share Department ปรับการแสดงปุ่ม Add \, Clear และเมื่อเลือกข้อมูล Department รูปแบบฟอร์มต้องไม่ขยับไปมา}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-6575 [Other Charge] การใช้งานปุ่ม View ในส่วน Other Charge Transaction}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-6576 [Other Charge] กรณี Total Amount ใน Transaction และ Installment มียอดไม่เท่ากัน เมื่อ Save \, Submit จะต้องมี Pop up ถาม}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-6577 [Other Charge List] ปรับการใช้งาน Request Date From / To}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-6578 [Other Charge List] ฟิลด์ Bill To กดแล้วไม่แสดง Pop up และขอความหมายของ Request No. Running No. C2568XXXXX}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-6583 [Other Charge List] ไม่แสดงข้อมูล Bill to Name}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-6589 [Other Charge List] การใช้งานและความหมายของ Submit Date}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-6591 [Other Charge] ปรับชื่อฟิลด์ Entry By และ Entry Date ให้กับหน้าจอ Request และ List}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-6592 [Other Charge List] ไม่แสดงข้อมูลในคอลัมน์ Invoice Date}} \\
-      description
-    \item \textbf{\jiralink{GISLOCK-6649 [Other Charge][Request Other Charge] ปรับการทำงานส่วน Contact Information ให้มีฟังก์ชันการทำงานเหมือนกับ AP}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-6675 [Other Charge][Request Other Charge] ส่วน Request Information ทำการ Edit ข้อมูลในตารางแต่ระบบไม่ Update ตาม}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-6773 [Other Charge][Request Other Charge] Submit ใบงาน ระบบแสดง The sum of all tables is not equal.}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-6877 [OTC][Request Other Charge] กรณีเลือก Edit รายการเพื่อตรวจสอบข้อมูล แต่ Entry Date แสดงเป็นวันที่ปัจจุบัน ซึ่งไม่ถูกต้องให้แก้ไขเป็นวันที่บันทึกใบงานตั้งต้น}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-6878 [OTC][Request Other Charge] กรณีเลือก Invoice Name ฟิลด์ Invoice Address จะต้องแสดงข้อมูลที่สัมพันธ์กับ Name ที่เลือก}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-6945 [Other Charge List] ปรับการแสดง Location และ Nationality กรณี Bill To เป็นข้อมูลเก่า โดยระบบต้องแสดงข้อมูลที่ได้เลือกจากตอนบันทึก}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-6953 [Other Charge] 1.แก้ไขการแสดง Request Information 2.แก้ไขการแสดง Currency/Exchange Rate 3.แก้ไขการแสดง Bill to Code}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7031 [Other Charge] ปรับการทำงานปุ่ม Submit และ Save Draft}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7064 [Other Charge] เมื่อ Submit and Save Draft ข้อมูลที่บันทึกไว้ในหน้าจอต้องไม่เคลียร์และ Redirect to List}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7144 [Other Charge List] ยอด Amount แสดงไม่ตรงกับการบันทึกในหน้า Request}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7215 [Other Charge] ตรวจสอบการคำนวณ Payment Due Date ให้ตรงตามเงื่อนไข}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7219 [Other Charge] เพิ่มการแจ้งเตือน Share Department และ Installment กรณีที่ Share (\%) มีจำนวน 0.00 และมากกว่า 100.00}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7230 [Other Charge] แก้ไขการกดปุ่ม Clear และ เพิ่ม Popup has been saved ให้กับการเพิ่มข้อมูลลงตาราง}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7241 [Other Charge] ลบรายการ Transaction ออกไปแล้ว ข้อมูลส่วน Installment และ ปุ่ม Update ยังแสดงอยู่ในหน้าจอ}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7243 [Other Charge] กดปุ่ม Update แล้วไม่ Update ข้อมูล กรณี Installment และ Share Dept มีข้อมูลทั้งคู่}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7258 [Other Charge] เพิ่มการปรับ \% ของ Share Department และ Installment}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7395 [Other Charge] เมื่อเลือก Vat Calculation = Non Vat ให้ Disable Field 1.Vat Type 2.Vat Rate \% 3.Vat Amount}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7419 [Other Charge] ส่วน Contact Information เพิ่มเงื่อนไขเมื่อไม่มีการเลือก Code ให้ Disable ส่วน Contact ไว้ก่อนเสมอ}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7439 [Other Charge] Vat Rate \% = 0 ให้ Disable Vat Amount}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7487 [Other Charge] ตรวจสอบการค้นหาข้อมูลแบบ ค้นหามีช่องว่างระหว่างคำ}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7494 [Other Charge] ปรับตำแหน่งการแสดงปุ่ม Search และ Clear}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7498 [Other Charge] Set up Transaction Code แก้ไขตามรายการ}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7529 [Other Charge] โปรแกรม Set up Transaction Code ทำการ Delete รายการในตารางแล้ว รายการไม่ถูกลบไป}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7554 [Other Charge] ลบรายการที่มี Vat Amount ที่ส่วน Transaction ออกไปแล้ว แต่ในส่วน Installment ยังค้างยอด Vat Amount เก่าไว้}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7587 [Other Charge] Set up Transaction Code เปลี่ยนจากปุ่ม Submit/Clear เป็น Save/Clear}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7626 [Other Charge] เปลี่ยนจากการส่งข้อมูลแบบ queryParams เป็นแบบ getState}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7628 [Other Charge] ปรับ status เป็นตัวกลางเพื่อให้ sort จะได้ เนื่องจากตอนนี้เป็นการใช้เงื่อนไขในการแปลงจาก code เป็น word และนำมาแสดง ไม่ใช่การ Join}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7629 [Other Charge] ลบข้อมูลในตาราง Installment แล้วในตาราง Transaction มีแต่เคส VATNO ระบบไม่ Disable Field Vat ในส่วน Installment ให้}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7631 [Other Charge][Set up Transaction Code] Mode Edit ข้อมูลที่เคยบันทึกไว้ เช่น WHT Rate กับ Show Trans code ไม่ตรงกับที่บันทึก}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7694 [Other Charge] แก้ไขการค้นหาช่วงวันที่ Date From และ Date To ให้ตรงกับช่วงที่ค้นหา}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7737 [Other Charge] Set up Transaction Code List กดปุ่ม Add แล้วไม่แสดงหน้าจอ Set up Transaction Code}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7793 [Other Charge] ส่วน Share Department ขาดการแสดงคอลัมน์ Department Name ที่ตารางแสดงผล}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7807 [Other Charge] OTC List กด link condition search และกดปุ่ม search ระบบแจ้งเตือน Invalid column name 'OTC\_BILLTO\_CD'.}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7847 [Other Charge] ฟิลด์ Vat Amount ส่วนของ Installment ไม่ Disable Field กรณี Transaction Code เป็น Non Vat ทั้งหมด (Edit จากหน้าจอ List เข้ามา)}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7860 [Other Charge List] Action Recall ไม่สามารถใช้งานได้}} \\
-        description
-    \item \textbf{\jiralink{GISLOCK-7932 [Other Charge] Billing Information กรณี Charge to Code เป็น All Purpose ระบบไม่แสดงข้อมูลให้อัตโนมัติ}} \\
-        description
+    \item \textbf{{GISLOCK-5457 [Other Charge] ปรับการแสดงผลข้อมูลในส่วน Bill to ให้ไปในทางเดียวกับ AP}} \\
+          เพิ่มการ Clear โดยการกดปุ่ม X ที่ Bill To
+    \item \textbf{{GISLOCK-6189 [Other Chare/Expense] Standard Search Search like เวลาเก็บ Data ใน DB ให้คั่นด้วย Space Bar}} \\
+          1.ปรับตรง placeholder ของการ Search เราจะเอาการเว้นวรรคออก จะแสดงชิดกันเลย โดยมี / คั่น
+          2.ตรง Database จะปรับจากการเก็บที่คั่นโดย | มาใช้เป็น " " (Spacebar หรือ การเคาะช่องว่างแทน) 
+    \item \textbf{{GISLOCK-6518 [FA- Other charge request] ปรับ feature ทำหน้าจอ Other charge request}} \\
+          เป็นการแก้หลายๆ จุดในโปรแกรม Other Charge Request ที่ได้มีการพัฒนาขึ้นมา \\
+            โดยมีการปรับปรุงดังนี้ \\
+            1. ปรับปรุงการแสดง ปุ่ม Add/Clear ของส่วน Share Department ให้ตำแหน่งปรับตำขนาดหน้าจอ\\
+            2. ปรับปรุงหน้า Approve เมื่อกด view mode มาต้องไม่มีปุ่ม Add/Clear ของแต่ละส่วนแสดง \\
+            3. view mode ที่กดมาจากหน้า List ส่วนของ Transaction จะต้องเอาข้อมูลของชุดแรกมาแสดง \\
+            4. Hq/Branch แสดงเป็นข้อมูล ไม่ต้องแสดงโค้ด \\
+            5. Exchange Rate ใน Transaction ให้แสดง 8 ตำแหน่ง \\
+            6. เมื่อเราเพิ่ม Transaction แล้วเราจะทำการปิด Currency/Exchange Rate ไม่ให้แก้ไขได้ เพื่อ Transaction ต่อไปจะได้ Currency/Exchange Rate เหมือนกัน\\
+            7. กรณีที่เรามี Installment หรือ Share Department แล้วเราไปแก้ไข Transaction เมื่อจะเซฟเราจะต้องเตือนบอกว่า Transaction มันเปลี่ยนแปลง และเซฟไม่ได้ 
+    \item \textbf{{GISLOCK-6561 [Other Charge] Pop up \: Bill To แสดงข้อมูลเดียวกัน ซ้ำๆ}} \\
+          สาเหตุที่ข้อมูลแสดงซ้ำ เนื่องจากมีการเชื่อมโยง (JOIN) กับตารางข้อมูลอื่น เช่น ตารางที่อยู่ (Address) ซึ่งมีหลายรายการต่อรหัสลูกค้าหรือพาร์ทเนอร์ ทำให้ข้อมูลหลักหนึ่งรายการถูกแสดงซ้ำตามจำนวนข้อมูลที่อยู่ที่สัมพันธ์กันในตารางดังกล่าว \\
+          วิธีแก้ไขคือ การปรับคำสั่ง SQL ที่ใช้ในการดึงข้อมูล โดยการใช้คำสั่ง DISTINCT เพื่อให้แสดงเฉพาะรายการที่ไม่ซ้ำกัน หรือการปรับโครงสร้างการ JOIN ให้เหมาะสมกับความต้องการของข้อมูลที่จะแสดง
+    \item \textbf{{GISLOCK-6563 [Other Charge] Contact Information จะต้องดึงข้อมูลมาจาก Contact Person ของ Client หรือ Partner มาแสดงโดย link up กับ Bill to ที่ได้เลือก}} \\
+          ปรับปรุงตรง Contact Information :\\
+          1.ดึงข้อมูลมาแสดงอัตโนมัติตาม Main Contact \\
+          2.กรณีมีหลาย Contact เปลี่ยนได้กดเปลี่ยนตรง modal จะมี Contact ที่สามารถเปลี่ยนได้
+    \item \textbf{{GISLOCK-6566 [Other Charge] ปรับ wording ของชื่อฟิลด์ ทั้งหน้า Request และ List}} \\
+          เป็นการแก้ไขคำของหน้า Request และ List
+    \item \textbf{{GISLOCK-6568 [Other Charge] ตรวจสอบการ Save Draft ใบงานและการแสดงค่าเริ่มต้นฟิลด์ Status}} \\
+          เพิ่มการเช็คตอนจะ Save Draft ใบคำขอ ให้เช็คว่าเราเลือกตัวที่ต้อง require หรือยัง ถ้ายังให้แจ้งเตือน \\
+          และปรับการแสดงค่าเริ่มต้นของฟิลด์ Status ให้แสดงเป็น "Save Draft" เมื่อสร้างใบคำขอใหม่
+    \item \textbf{{GISLOCK-6571 [Other Charge] ส่วน Share Department ปรับการแสดงปุ่ม Add \, Clear และเมื่อเลือกข้อมูล Department รูปแบบฟอร์มต้องไม่ขยับไปมา}} \\
+          ปรับปรุงการแสดงปุ่ม Add และ Clear ในส่วนของ Share Department ให้มีตำแหน่งที่คงที่ ไม่ขยับไปมาเมื่อมีการเลือกข้อมูล 
+    \item \textbf{{GISLOCK-6575 [Other Charge] การใช้งานปุ่ม View ในส่วน Other Charge Transaction}} \\
+          เพิ่มปุ่ม Back ในหน้าจอ View ของส่วน Other Charge Transaction \\
+          เพื่อให้ผู้ใช้สามารถกลับไปยังหน้าจอก่อนหน้าได้อย่างสะดวก
+    \item \textbf{{GISLOCK-6576 [Other Charge] กรณี Total Amount ใน Transaction และ Installment มียอดไม่เท่ากัน เมื่อ Save \, Submit จะต้องมี Pop up ถาม}} \\
+          เมื่อ Total Amount ในส่วนของ Transaction และ Installment มียอดไม่เท่ากัน \\
+          ระบบจะต้องแสดง Pop-up แจ้งเตือนผู้ใช้ว่า ยอดรวมไม่ตรงกัน และให้ผู้ใช้ทำการตรวจสอบและแก้ไขข้อมูลก่อนที่จะทำการ Save หรือ Submit ใบคำขอ
+    \item \textbf{{GISLOCK-6577 [Other Charge List] ปรับการใช้งาน Request Date From / To}} \\
+          1.เพิ่มตรง Coondition Search โดยการเพิ่มการค้นหาด้วย Status 
+          2.ไม่ Default วันที่ให้ตอนเริ่มเพราะให้มาเลือกเอง
+    \item \textbf{{GISLOCK-6578 [Other Charge List] ฟิลด์ Bill To กดแล้วไม่แสดง Pop up และขอความหมายของ Request No. Running No. C2568XXXXX}} \\
+          สาเหตุที่กดแล้วไม่แสดง Pop-up เกิดจากการที่เราไปเรียก id ของ Pop-up นั้นไม่ถูกต้อง
+    \item \textbf{{GISLOCK-6583 [Other Charge List] ไม่แสดงข้อมูล Bill to Name}} \\
+          เกิดจากการที่ก่อนหน้านี้มีการเก็บข้อมูล Bill to Name ในตารางที่ไม่ถูกต้อง \\
+          วิธีแก้ไขคือ ตอนที่เราจะเซฟใบงานเราจะเลือกให้ถูกฟิลด์พอตอนจะเรียกมาหน้า List ก็จะได้ข้อมูลที่ถูกต้อง
+    \item \textbf{{GISLOCK-6589 [Other Charge List] การใช้งานและความหมายของ Submit Date}} \\
+          เพิ่มคำอธิบายใต้ฟิลด์ Submit Date ในหน้า Other Charge List 
+    \item \textbf{{GISLOCK-6591 [Other Charge] ปรับชื่อฟิลด์ Entry By และ Entry Date ให้กับหน้าจอ Request และ List}} \\
+          เปลี่ยนมาใช้ชื่อฟิลด์เป็น Entry By และ Entry Date ในหน้าจอ Request และ List 
+    \item \textbf{{GISLOCK-6592 [Other Charge List] เพิ่มการแสกงข้อมูลในคอลัมน์ Invoice Date}} \\
+          เพิ่มการแสดงข้อมูลในคอลัมน์ Invoice Date ในหน้า Other Charge List 
+    \item \textbf{{GISLOCK-6649 [Other Charge][Request Other Charge] ปรับการทำงานส่วน Contact Information ให้มีฟังก์ชันการทำงานเหมือนกับ AP}} \\
+          ปรับการทำงานตามนี้ \: \\
+          1. เมื่อเลือก Bill to Code แล้วให้ดึงข้อมูล Contact Information มาแสดงอัตโนมัติ โดยเลือกจาก All Purpose เป็นลำดับแรก \\
+          2. หากมีหลาย contact สามารถกดปุ่มแว่นขยายเพื่อแสดง modal ของ contact ที่มีหลายอันแล้งเลือกได้
+    \item \textbf{{GISLOCK-6675 [Other Charge][Request Other Charge] ส่วน Request Information ทำการ Edit ข้อมูลในตารางแต่ระบบไม่ Update ตาม}} \\
+        เกิดจากการที่เราส่งข้อมูลไปแต่ว่าไอดีในการอัปเดตข้อมูลนั้นไม่ถูกส่งไป เลยไม่รู้ว่าจะแก้ไขที่ข้อมูลไหน ทำการแก้ไขโดยการส่งไอดีเพิ่มไปด้วย
+    \item \textbf{{GISLOCK-6773 [Other Charge][Request Other Charge] Submit ใบงาน ระบบแสดง The sum of all tables is not equal.}} \\
+        เพิ่มการแสดง Modal เมื่อผลรวมของ Total Amount ไม่เท่ากันใน Installment และ Share Department
+    \item \textbf{{GISLOCK-6877 [OTC][Request Other Charge] กรณีเลือก Edit รายการเพื่อตรวจสอบข้อมูล แต่ Entry Date แสดงเป็นวันที่ปัจจุบัน ซึ่งไม่ถูกต้องให้แก้ไขเป็นวันที่บันทึกใบงานตั้งต้น}} \\
+        จากเดิมก่อนหน้านี้เป็นการ mock up ข้อมูลมาเลยทำให้การแสดงเป็นวันปุจจุบันเสมอ เราจะแก้ไขใน mode edit ให้ไปดึงข้อมูลจากฐานข้อมูลมาแสดงแทน
+    \item \textbf{{GISLOCK-6878 [OTC][Request Other Charge] กรณีเลือก Invoice Name ฟิลด์ Invoice Address จะต้องแสดงข้อมูลที่สัมพันธ์กับ Name ที่เลือก}} \\
+        ปรับปรุงการทำงานของฟิลด์ Invoice Address ให้แสดงข้อมูลที่สัมพันธ์กับ Invoice Name ที่ผู้ใช้เลือก \\
+        โดยการเชื่อมโยงข้อมูลจากฐานข้อมูลเพื่อดึงที่อยู่ที่ตรงกับชื่อที่เลือกมาแสดง
+    \item \textbf{{GISLOCK-6945 [Other Charge List] ปรับการแสดง Location และ Nationality กรณี Bill To เป็นข้อมูลเก่า โดยระบบต้องแสดงข้อมูลที่ได้เลือกจากตอนบันทึก}} \\
+        เดิมทีเรามีการเก็บ เป็นคำ location ประมาณนี้แต่เรามีการปรับรูปแบบใหม่ให้เป็นเป็นคีย์ L แบบนี้แทน เราเลยมีเขียน sql เพื่อดึงข้อมูลเดิมมาแล้วดักเคสที่ส่งออกไป ตอนเราจะดึงข้อมูลมาแสดงก็จะได้ข้อมูลใหม่ที่เป้น คีย์ L แทน\\
+        แล้วตอนเซฟเราก็จะเซฟเป็นคีย์ L ไปเลย ทำให้เป็นการอัปเดตข้อมูลให้เป็นรูปแบบใหม่ทั้งหมด
+    \item \textbf{{GISLOCK-6953 [Other Charge] 1.แก้ไขการแสดง Request Information 2.แก้ไขการแสดง Currency/Exchange Rate 3.แก้ไขการแสดง Bill to Code}} \\
+        1. เมื่อทำการกด Icon Edit ข้อมูล Transaction Code ในตารางและไปกดปุ่ม Request Information ข้อมูลเดิมจะต้องไม่หาย \\
+        2. เมื่อ Edit เข้ามาจากหน้า List ถ้ามี Transaction อยู่เราจะ Disable Currency และ Exchange Rate เพราะจะใช้ตามอันที่มี
+        3. เมื่อ x กากบาท Code หรือ x กากบาท Pop up จะต้องเรียก Service ใหม่ทุกครั้ง เป็นการ refresh ทุกครั้งที่เรากดมาใหม่
+    \item \textbf{{GISLOCK-7031 [Other Charge] ปรับการทำงานปุ่ม Submit และ Save Draft}} \\
+        จากเดิมเมื่อเป็น view mode ปุ่ม Submit กับ Save Draft มันจะ Disable แต่ยังกดและทำงานได้ \\
+        เราเลยปรับให้ปุ่มมันกดไม่ได้เลยเมื่อเป็น view mode 
+    \item \textbf{{GISLOCK-7064 [Other Charge] เมื่อ Submit and Save Draft ข้อมูลที่บันทึกไว้ในหน้าจอต้องไม่เคลียร์และ Redirect to List}} \\
+        จากอันเดิมก่อนหน้านี้พอเรากด Submit หรือ Save Draft ข้อมูลมันจะเคลียร์ออกจากหน้าจอและนำทางไปสู่หน้าลิสต์ \\
+        เราเลยปรับให้เมื่อกด Submit หรือ Save Draft ข้อมูลที่บันทึกไว้ยังคงอยู่ในหน้าจอ และจะ Redirect to List เฉพาะเมื่อผู้ใช้เลือกที่จะกลับไปยังหน้าลิสต์ด้วยตัวเอง
+    \item \textbf{{GISLOCK-7144 [Other Charge List] ยอด Amount แสดงไม่ตรงกับการบันทึกในหน้า Request}} \\
+        เปลี่ยนจากเดิมเราจะใช้ผลรวมของ Amount ในตาราง Transaction มาแสดง \\
+        เป็นการไปดึงยอดผลรวมของ Total Amount มาแสดงแทน
+    \item \textbf{{GISLOCK-7215 [Other Charge] ตรวจสอบการคำนวณ Payment Due Date ให้ตรงตามเงื่อนไข}} \\
+        ปรับปรุงการคำนวณ Payment Due Date ในหน้าจอ Other Charge Request \\
+        โดยจะมีเงื่อนไขดังนี้ \\
+        1. การคิด Payment Due Date จะเป็น วันที่สร้างใบคำขอ + payment term ของคนนั้นๆ แต่ถ้าไม่มีจะเป็นค่าเริ่มต้นให้ 30 วัน\\
+        2. ถ้า Payment Due Date ตรงกับเสาร์อาทิตย์ และ วันหยุดนักขัตฤกษ์ จะเลื่อนไปเป็นวันทำการถัดไปโดยอัตโนมัติ
+    \item \textbf{{GISLOCK-7219 [Other Charge] เพิ่มการแจ้งเตือน Share Department และ Installment กรณีที่ Share (\%) มีจำนวน 0.00 และมากกว่า 100.00}} \\
+        ปรับการแจ้งเตือนจากเดิมไม่มีจุดทศนิยม \\
+        เป็นการเพิ่มจุดทศนิยม 2 ตำแหน่งในการแจ้งเตือนเมื่อ Share (\%) มีจำนวน 0.00 และมากกว่า 100.00 \\
+        เพิ่มการดักเคสที่กรอกค่าเกิน 100.00 และน้อยกว่า 0.00 หรือเท่ากับ 0.00
+    \item \textbf{{GISLOCK-7230 [Other Charge] แก้ไขการกดปุ่ม Clear และ เพิ่ม Popup has been saved ให้กับการเพิ่มข้อมูลลงตาราง}} \\
+        เพิ่มการแสดง modal เมื่อ add update และ delete เพื่อบอกว่าทำเสร็จแล้วของ Transaction , Request Information , Share Department , Installment
+    \item \textbf{{GISLOCK-7241 [Other Charge] ลบรายการ Transaction ออกไปแล้ว ข้อมูลส่วน Installment และ ปุ่ม Update ยังแสดงอยู่ในหน้าจอ}} \\
+        เพิ่มการเช็คตอนที่เราจะเซ็ตค่าใหม่ให้อัปเดตตามเงื่อนไข
+    \item \textbf{{GISLOCK-7243 [Other Charge] กดปุ่ม Update แล้วไม่ Update ข้อมูล กรณี Installment และ Share Dept มีข้อมูลทั้งคู่}} \\
+        เกิดจากการที่เราส่ง payload ไปให้หลังบ้านไม่ถูกเลยทำให้การอัปเดตทำงานไม่ถูกต้อง \\
+        แก้ไขโดยการปรับ payload ก็จะสามารถอัปเดตได้ปกติ
+    \item \textbf{{GISLOCK-7258 [Other Charge] เพิ่มการปรับ \% ของ Share Department และ Installment}} \\
+        เพิ่มการคำนวณเปอร์เซ็นต์ให้อัตโนมัติเช่น เริ่มต้นเรามี 100 แล้วเราเพิ่มอันแรกไป 20 แล้วมันก็จะเหลือ 80 ให้ใช้ครั้งต่อไป รวมถึงการคำนวณ total amount ด้วย
+    \item \textbf{{GISLOCK-7395 [Other Charge] เมื่อเลือก Vat Calculation = Non Vat ให้ Disable Field 1.Vat Type 2.Vat Rate \% 3.Vat Amount}} \\
+        จะทำการปิดฟิลด์ดังกล่าวเมื่อเลือก Vat Calculation เป็น Non Vat
+    \item \textbf{{GISLOCK-7419 [Other Charge] ส่วน Contact Information เพิ่มเงื่อนไขเมื่อไม่มีการเลือก Code ให้ Disable ส่วน Contact ไว้ก่อนเสมอ}} \\
+        ปรับปรุงให้เมื่อเราเข้ามาครั้งแรกตอนที่เรายังไม่เลือก ลูกค้าหรือพาร์ทเนอร์ เราจะ Disable ส่วนของ Contact ไว้ก่อน
+    \item \textbf{{GISLOCK-7439 [Other Charge] Vat Rate \% = 0 ให้ Disable Vat Amount}} \\
+        ใน Transaction เราเราเลือก Vat Rate เป็น 0 gik0tmedki Disable Vat Amount ไปเลย เพื่อจะได้ไม่สามารถแก้ไขได้เพราะเราเลือก 0 แล้ว 
+    \item \textbf{{GISLOCK-7487 [Other Charge] ตรวจสอบการค้นหาข้อมูลแบบ ค้นหามีช่องว่างระหว่างคำ}} \\
+        ปรับรูปแบบการ search ใหม่ จากเดิมเราจะ search ได้ทีละตัว แต่เราจะทำการเพิ่มไป เป็นการ search แบบหลายตัว เช่น "AA BA" \\
+        เราจะแสดงผลลัพธ์ที่ตรงกับ AA มาทั้งหมดก่อน ต่ามด้วย BA ต่อด้วย
+    \item \textbf{{GISLOCK-7494 [Other Charge] ปรับตำแหน่งการแสดงปุ่ม Search และ Clear}} \\
+        ปรับตำแหน่งการแสดงปุ่ม
+    \item \textbf{{GISLOCK-7498 [Other Charge] Set up Transaction Code แก้ไขตามรายการ}} \\
+        1. Account Code ทำเป็น * ฟิลด์เพื่อป้องปันการ Add ลงตารางโดยที่ไม่เลือกข้อมูล \\
+        2. เพิ่มการทำงานของปุ่ม Clear หลัก \\
+        3. ปรับ Icon : edit, delete ให้ตรงกับโปรแกรม Standard \\
+        4. Account Code จะต้องแสดงแด่ Code และ Account Name สามารถดูได้อย่างเดียวไม่สามารถแก้ไขได้ \\
+        7. ปรับฟิลด์ Type มาเป็น Transaction Type ตามหน้า List
+        8. เพิ่มการ Validate WHT Rate * และเป็น require field
+    \item \textbf{{GISLOCK-7529 [Other Charge] โปรแกรม Set up Transaction Code ทำการ Delete รายการในตารางแล้ว รายการไม่ถูกลบไป}} \\
+        ปัญหาเกิดจาก Race Condition คือคำสั่ง GET ทำงานก่อนที่คำสั่ง DELETE จะเสร็จสมบูรณ์ ทำให้เห็นข้อมูลที่ยังไม่ถูกลบจริง \\
+        รอให้การลบเสร็จสิ้นก่อนดึงข้อมูล หรือใช้ Transaction/Locking เพื่อควบคุมลำดับการทำงานไม่ให้คำสั่งชนกัน.
+    \item \textbf{{GISLOCK-7554 [Other Charge] ลบรายการที่มี Vat Amount ที่ส่วน Transaction ออกไปแล้ว แต่ในส่วน Installment ยังค้างยอด Vat Amount เก่าไว้}} \\
+        เกิดจากการที่เราทำการแก้ไขใน Transaction แล้วในส่วนของ Installment ไม่ได้รู้ว่ามันเปลี่ยน เลยแก้ไขโดยการสร้างฟังก์ชันที่จะเช็คว่าถ้ามีการเปลี่ยนแปลงและเข้าเงื่อนไขที่เราตั้งก็จะไปทำฟังก์ชันนี้ก็จะสามารถทำงานได้ปกติ
+    \item \textbf{{GISLOCK-7587 [Other Charge] Set up Transaction Code เปลี่ยนจากปุ่ม Submit/Clear เป็น Save/Clear}} \\
+        เปลี่ยนหน้า Ui ของปุ่ม
+    \item \textbf{{GISLOCK-7626 [Other Charge] เปลี่ยนจากการส่งข้อมูลแบบ queryParams เป็นแบบ getState}} \\
+        ปรับจากเดิมที่เป็นการรับมาจาก Params เราปรับเปลี่ยนมาใช้ในรูปแบบ State ซึ่งปลอดภัยและใช้งานได้ดีกว่า
+    \item \textbf{{GISLOCK-7628 [Other Charge] ปรับ status เป็นตัวกลางเพื่อให้ sort จะได้ เนื่องจากตอนนี้เป็นการใช้เงื่อนไขในการแปลงจาก code เป็น word และนำมาแสดง ไม่ใช่การ Join}} \\
+        เพิ่ม status ของ Other Charge ให้ไปเป็น Workflow ของตัวกลางเพื่อที่จะได้เข้ากระบวนการ approval ของส่วนกลาง และ จะสามารถนำมา Sort ได้
+    \item \textbf{{GISLOCK-7629 [Other Charge] ลบข้อมูลในตาราง Installment แล้วในตาราง Transaction มีแต่เคส VATNO ระบบไม่ Disable Field Vat ในส่วน Installment ให้}} \\
+        เกิดจากตอนที่เรา แก้ไขข้อมูลใน Installment แล้วเราไม่ได้เช็คของ Transaction เลยทำให้ตอนเราลบแล้วจะเซ็ตใหม่เลยกลับมาเปิด Vat Amount ทั้งๆที่ใน Transaction ยังมี VATNO \\
+        เราแก้ไขโดยการเพิ่มการเช็คไปตอนเราเคลียร์เพื่อจะเซ็ตใหม่ ก็จะทำให้ฟิลด์เปิดปิดตามข้อมูล Transaction ที่เรามี
+    \item \textbf{{GISLOCK-7631 [Other Charge][Set up Transaction Code] Mode Edit ข้อมูลที่เคยบันทึกไว้ เช่น WHT Rate กับ Show Trans code ไม่ตรงกับที่บันทึก}} \\
+        ปัญหานี้เกิดจาก type ของ ฟิลด์ WHT Rate ไม่ตรงกับ Database \\
+        เราเลยแก้ไขโดยการปรับ type ของฟิลด์ WHT Rate ให้ตรงกับ Database ก็จะสามารถดึงข้อมูลมาแสดงในโหมด Edit ได้ถูกต้อง
+    \item \textbf{{GISLOCK-7694 [Other Charge] แก้ไขการค้นหาช่วงวันที่ Date From และ Date To ให้ตรงกับช่วงที่ค้นหา}} \\
+        จากเดิมตอนเราเลือกใน format เป็น ISO 8601 อาจมีปัจจัยเรื่อง Timezone เข้ามาเกี่ยวข้องทำให้การค้นหาไม่ตรงกับช่วงวันที่ที่เลือก \\
+        เราเลยแก้ไขโดยปรับเป็นรูปแบบ dd/mm/yyyy แทน ทีนี้ก็จะไม่มีปัญหาเรื่อง Timezone แล้ว ก็จะทำให้การค้นหาตรงกับช่วงวันที่ที่เลือก
+    \item \textbf{{GISLOCK-7737 [Other Charge] Set up Transaction Code List กดปุ่ม Add แล้วไม่แสดงหน้าจอ Set up Transaction Code}} \\
+        เรามีการปรับจากเดิมที่มีการใช้ getParam มาเป็นการใช้ getState \\
+        พอเรากด Add มาจากหน้า List อาจทำให้ State ที่ส่งมาไม่ครบ เราเลยแก้ไขให้ตอนกด Add มันจะไม่เอา State อะไรมาส่งเลย ทำให้มัน Redirect มาที่หน้า Set up Transaction Code List ปกติ \\
+        แก้ไขโดยการ set ค่า default ให้กับ State ที่ขาดหายไป 
+    \item \textbf{{GISLOCK-7793 [Other Charge] ส่วน Share Department ขาดการแสดงคอลัมน์ Department Name ที่ตารางแสดงผล}} \\
+        เพิ่มส่วนของ Department Name ในตารางแสดงผลของ Share Department \\
+        โดยการดึงข้อมูลชื่อแผนกจากฐานข้อมูลมาแสดงในตาราง
+    \item \textbf{{GISLOCK-7807 [Other Charge] OTC List กด link condition search และกดปุ่ม search ระบบแจ้งเตือน Invalid column name 'OTC\_BILLTO\_CD'.}} \\
+        เกิดจากการที่เราปรับ Database ใหม่ ทำให้ชื่อคอลัมน์เปลี่ยนไป \\
+        เราเลยแก้ไข SQL query ให้ตรงกับชื่อคอลัมน์ใหม่ที่ถูกต้อง
+    \item \textbf{{GISLOCK-7847 [Other Charge] ฟิลด์ Vat Amount ส่วนของ Installment ไม่ Disable Field กรณี Transaction Code เป็น Non Vat ทั้งหมด (Edit จากหน้าจอ List เข้ามา)}} \\
+        เพิ่มการเช็คข้อมูลตอนกด edit ว่าในตาราง Transaction มีแต่ Non Vat หรือไม่ \\
+        ถ้ามีแต่ Non Vat ก็จะทำการ Disable Field Vat Amount ในตาราง Installment ให้อัตโนมัติ
+    \item \textbf{{GISLOCK-7860 [Other Charge List] Action Recall ไม่สามารถใช้งานได้}} \\
+        จากเดิมเราจะเป็นการเขียน mock up ขึ้นมา ทำให้ Action Recall ไม่สามารถใช้งานได้ \\
+        เราเลยปรับให้ Action Recall สามารถใช้งานได้จริง โดยการเชื่อมต่อกับฐานข้อมูลและดึงข้อมูลที่ถูกต้องมาแสดง
 \end{itemize}
 
 \subsubsection{CR}
 \begin{itemize}
     \setlength\itemsep{1em}
-    \item \textbf{\jiralink{GISLOCK-6694 [OTC][Booking] แก้ไขโปรแกรมหลัง Demo1 with Champion GISLOCK-6715[OTC][OTC List] แก้ไขชื่อคอลัมน์ และ ดึงข้อมูลมาแสดง หลังมีการ Demo 1 - 22/7/68}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-6696 [OTC][OTE][Request OTC] ปรับการแสดง HQ/Branch และ Branch No.}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-6698 [FA - Other Charge/Other Expense] หน้าจอ Request Other Charge ปรับ Contact Information เพิ่มคอลัมน์ Purpose For}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-6699 [OTC][OTE][Request OTC] ส่วน Other Charge Transaction}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-7196 [All Screen] แก้ไข Icon ในปุ่ม Save Draft ให้เหมือนกัน}} \\
-          description
-    \item \textbf{\jiralink{GISLOCK-7390 [Date] เพิ่มเรื่องการ validate วันที่ From ToGISLOCK-7398 [Other Charge] เพิ่มเรื่องการ validate วันที่ From To}} \\
-          description
+    \item \textbf{{GISLOCK-6697 [OTC][Request OTC] ปรับการแสดงส่วน Invoice 1.Invoice Name 2.Invoice Address 3.Invoice Date}} \\
+          ปรับการแสดง Invoice จากเดิมที่แสดงข้อมูลในรูปแบบ modal\\
+            เป็นการแสดงข้อมูลในรูปแบบของ field ที่แสดงบนหน้าจอปกติแทน
+    \item \textbf{{GISLOCK-6715[OTC][OTC List] แก้ไขชื่อคอลัมน์ และ ดึงข้อมูลมาแสดง หลังมีการ Demo 1 - 22/7/68}} \\
+          ปรับจากกเดิมหลังจากที่ได้มีการ Demo กับทางผู้ใช้งานไปเมื่อวันที่ 22 กรกฎาคม 2568 \\
+            โดยมีการเปลี่ยนแปลงดังนี้ \\
+            1. เปลี่ยนชื่อคอลัมน์จาก Invoice Date เป็น Payment Due Date
+    \item \textbf{{GISLOCK-6696 [OTC][OTE][Request OTC] ปรับการแสดง HQ/Branch และ Branch No.}} \\
+          1.ปรับ HQ/Branch มาเป็นแสดงเป็นชื่อแทนโค้ด \\
+          2.Branch No. เป็นค่าว่างเมื่อ HQ/Branch เป็นสำนักงานใหญ่ \\
+          3.การแสดง Headquarter หรือ สำนักงานใหญ่อ้างอิงตาม Main Languaege
+    \item \textbf{{GISLOCK-6698 [FA - Other Charge/Other Expense] หน้าจอ Request Other Charge ปรับ Contact Information เพิ่มคอลัมน์ Purpose For}} \\
+          เพิ่มคอลัมน์ Purpose For ในส่วนของ Contact Information \\
+            เพื่อให้ผู้ใช้สามารถระบุวัตถุประสงค์ในการติดต่อได้อย่างชัดเจนมากขึ้น 
+    \item \textbf{{GISLOCK-6699 [OTC][OTE][Request OTC] ส่วน Other Charge Transaction}} \\
+          1.Currency กรณีเป็น Thai หรือ Local default ค่าเป็ฯ THB \\
+          2.Exchange Rate ดึงค่ามาจากค่ากลาง  \\
+          3.ปรับ UI ของ Description ของ Transaction \\
+          4.ที่โปรแกรม Request Information :\\
+            - สลับฟิลด์ Insured มาแสดงก่อน Type of Insurance \\
+            - Type of Insurance ปรับมาเป็น Dropdown List \\
+            - Brokerage Amount คำนวณ Auto เมื่อเรา ระบุ Brokerage \%
+    \item \textbf{{GISLOCK-7196 [All Screen] แก้ไข Icon ในปุ่ม Save Draft ให้เหมือนกัน}} \\
+          ปรับไอคอนในปุ่ม Save Draft ให้มีความสอดคล้องและเหมือนกันในทุกหน้าจอ \\
+            เพื่อให้ผู้ใช้สามารถจดจำและใช้งานได้ง่ายขึ้น
+    \item \textbf{{GISLOCK-7390 [Date] เพิ่มเรื่องการ validate วันที่ From ToGISLOCK-7398 [Other Charge] เพิ่มเรื่องการ validate วันที่ From To}} \\
+          ปรับไปดึงฟังก์ชันการตรวจสอบวันที่ From และ To จากฟังก์ชั่นกลาง \\ 
+            เพื่อให้การตรวจสอบมีความถูกต้องและสอดคล้องกับมาตรฐานที่กำหนดไว้
+    \item \textbf{{GISLOCK-7617 [Other Charge] ปรับชื่อฟิลด์ ในหน้าจอ และ DB}} \\
+            ปรับชื่อฟิลด์ในหน้าจอและฐานข้อมูลให้มีความสอดคล้องและเข้าใจง่ายขึ้น \\
+                เพื่อให้ผู้ใช้สามารถใช้งานและเข้าใจข้อมูลได้อย่างถูกต้อง หลังจากที่ได้รับข้อเสนอแนะจากผู้ใช้งาน
 \end{itemize}

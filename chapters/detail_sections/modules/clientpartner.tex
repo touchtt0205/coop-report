@@ -3,41 +3,41 @@
 \subsubsection{Defect}
 \begin{itemize}
     \setlength\itemsep{1em}
-    \item \textbf{\jiralink{GISLOCK-4938 [Transfer Prospect to Client][Client Amendment] กด Edit > Update ระบบ Clear ข้อมูล Attachments}} \\
+    \item \textbf{{GISLOCK-4938 [Transfer Prospect to Client][Client Amendment] กด Edit > Update ระบบ Clear ข้อมูล Attachments}} \\
           เกิดจากการที่ตอนแรกมันเซ็ต setAtm\_puid\_ref\_file เป็น null เลยส่งค่า invalidData ไปเลยทำให้แสดงค่านั้น แก้ไขโดยการเซ็ตค่าก่อนจะส่งไปทำให้หาเจอ แล้วก็สามารถแสดงได้ปกติ      
-    \item \textbf{\jiralink{GISLOCK-5128 [New Prospect/Client] กรณี Duplicate งานต่าง Department แล้วมีการแนบ Attachment ระบบไม่สามารถ Preview File ได้}} \\
+    \item \textbf{{GISLOCK-5128 [New Prospect/Client] กรณี Duplicate งานต่าง Department แล้วมีการแนบ Attachment ระบบไม่สามารถ Preview File ได้}} \\
           เกิดจากการที่ตอนแรกไม่มีการ set department เลยทำให้การส่ง atm\_can\_preview ไปเป็น N ซึ่งเปิดดูไม่ได้ แต่พอเรา setDept ใหม่ คือเราที่เข้ามา เลย พอเรา setDept เป็นคนที่เราแนบเข้ามา มันเลยไปเช็ค dept ใน database มันเลยตรงกันทำให้ ส่ง atm\_can\_preview มาให้หน้าบ้านเลยสามารถ preview ได้
-    \item \textbf{\jiralink{GISLOCK-5157 [Partner Amendment] เปลี่ยนชื่อ Field จาก Thai Name, English Name เป็น Partner Name}} \\
+    \item \textbf{{GISLOCK-5157 [Partner Amendment] เปลี่ยนชื่อ Field จาก Thai Name, English Name เป็น Partner Name}} \\
           เเปลี่ยนชื่อ Field จาก Thai Name, English Name เป็น Partner Name (TH) , Partner Name (EN)
-    \item \textbf{\jiralink{GISLOCK-5170 [Partner Amendment][Partner Previous Details] แก้ไขชื่อ Attachments และ Address Location}} \\
+    \item \textbf{{GISLOCK-5170 [Partner Amendment][Partner Previous Details] แก้ไขชื่อ Attachments และ Address Location}} \\
           เปลี่ยนชื่อ Field จาก Address , Attachment เป็น Address Location , Attachments
-    \item \textbf{\jiralink{GISLOCK-5230 [Partner Amendment] ระบบไม่ Disable Field Payment Method Detail}} \\
+    \item \textbf{{GISLOCK-5230 [Partner Amendment] ระบบไม่ Disable Field Payment Method Detail}} \\
           เพิ่มการ Disable Field Payment Method Detail
-    \item \textbf{\jiralink{GISLOCK-5231 [Partner] ระบบไม่แสดงข้อมูล Withholding Tax Rate}} \\
+    \item \textbf{{GISLOCK-5231 [Partner] ระบบไม่แสดงข้อมูล Withholding Tax Rate}} \\
           งานนนี้เป็นงานแก้ไขโดยการเปลี่ยนไปใช้ฟังก์ชันกลางที่ทำไว้แล้ว อันเดิมเป็นเรียกฟังก์ชันเก่าเลยไม่แสดงข้อมูล Withholding Tax Rate พอเราปรับไปใช้ฟังก์ชั่นใหม่ก็จะแสดงมาปกติ     
-    \item \textbf{\jiralink{GISLOCK-5265 [Approve Client][Approve Partner] ระบบแสดง Attached By ไม่ถูกต้อง (ติดการ์ด 5621)}} \\
+    \item \textbf{{GISLOCK-5265 [Approve Client][Approve Partner] ระบบแสดง Attached By ไม่ถูกต้อง (ติดการ์ด 5621)}} \\
           งานนนี้เป็นงานแก้ไขเงื่อนไขการเช็ค typeof partnerTypeValueList === 'object' เพิ่มไปด้วย ที่เหลือจะเป็นงานที่ไปปรับตรงของ GISLOCK-5261 
-    \item \textbf{\jiralink{GISLOCK-5302 [Partner Amendment] แก้ไขการแสดงข้อมูล Contact Person ของปุ่ม Partner Previous Detail}} \\
+    \item \textbf{{GISLOCK-5302 [Partner Amendment] แก้ไขการแสดงข้อมูล Contact Person ของปุ่ม Partner Previous Detail}} \\
           เปลี่ยนชื่อ Field จาก Relation to Client เป็น Relation to Partner
-    \item \textbf{\jiralink{GISLOCK-5699 [Setting][Program on Module] Edit รายการเเล้ว Error}} \\
+    \item \textbf{{GISLOCK-5699 [Setting][Program on Module] Edit รายการเเล้ว Error}} \\
           มี 2 กรณี คือ \\
           1. Save แล้ว Error เพราะมันเอาชื่อที่เราแก้ไปเซ็ตให้ตรง menu แล้วมันเอาชื่อนั้นมาเช็คแล้วเจอข้อมูลเลยส่งไป แก้ไขโดยการเปลี่ยนเงื่อนไข จากเดิมใช้ชื่อ ตอนนี้ปรับมาใช้ prog\_id และ folder\_id มาเช็คแทน เพราะมันคนละส่วนกัน \\ 
           2. เพิ่มกรณีเมื่อเรากด Edit เข้ามาแล้วกดปุ่ม Clear ก็จะนำข้อมูลที่แก้ไขไปก่อนหน้านี้กลับมาได้
-    \item \textbf{\jiralink{GISLOCK-5752 [Partner][Partner Amendment] Accordion General Info ระบุข้อมูลที่ Company Name (EN) เป็น Lockton ระบบไม่ Auto เลือกข้อมูล Inter Company (LWT Group) เป็น Yes}} \\
+    \item \textbf{{GISLOCK-5752 [Partner][Partner Amendment] Accordion General Info ระบุข้อมูลที่ Company Name (EN) เป็น Lockton ระบบไม่ Auto เลือกข้อมูล Inter Company (LWT Group) เป็น Yes}} \\
           เพิ่มเงื่อนไขในการเช็ค Company Name (EN) ว่าเป็น Lockton หรือเปล่า ถ้าใช่ก็จะ set ค่า Inter Company (LWT Group) เป็น Yes ให้อัตโนมัติในหน้า Partner Amendment ด้วย
-    \item \textbf{\jiralink{GISLOCK-5753 [Partner Amendment] ไม่สามารถกด Sort Description ที่ Popup Copy Address From Address Location ได้}} \\
+    \item \textbf{{GISLOCK-5753 [Partner Amendment] ไม่สามารถกด Sort Description ที่ Popup Copy Address From Address Location ได้}} \\
           เกิดจากการที่เราส่งตัว formcontrol ไปผิด เดิมส่ง descriptionEn มาเป็น description แทน
-    \item \textbf{\jiralink{GISLOCK-5761 [General Setup][Document Running] Icon Warning ต้องเป็นเครื่องหมายตกใจ สีเหลือง}} \\
+    \item \textbf{{GISLOCK-5761 [General Setup][Document Running] Icon Warning ต้องเป็นเครื่องหมายตกใจ สีเหลือง}} \\
           งานนนี้เป็นงานแก้ไขโดยการเปลี่ยนไอค่อนของ modal แจ้งเตือนใหม่
-    \item \textbf{\jiralink{GISLOCK-7013 [Parent/Group] Add Parent แล้วไม่ติ้ก Auto Create Client Group ระบบแสดงไม่ถูกต้อง}} \\
+    \item \textbf{{GISLOCK-7013 [Parent/Group] Add Parent แล้วไม่ติ้ก Auto Create Client Group ระบบแสดงไม่ถูกต้อง}} \\
           งานนนี้เป็นงานแก้ไขหน้า UI ตรงการแสดงผล ตอนแรกมันจะแสดงภายในกรอบทำให้แสดงไม่ครบ เราปรับมาใช้ appendTo: 'body' เพื่อให้แสดงข้อมูลได้ถูกต้อง
-    \item \textbf{\jiralink{GISLOCK-7052 [New Prospect/Client] ระบบไม่แสดง Effective Date ที่ Introducer Info}} \\
+    \item \textbf{{GISLOCK-7052 [New Prospect/Client] ระบบไม่แสดง Effective Date ที่ Introducer Info}} \\
           เกิดจากการที่ type ของ Effective Date ตรงหน้าบ้านประกาศไม่ตรงกับ type ที่หลังบ้านส่งมาให้
-    \item \textbf{\jiralink{GISLOCK-7056 [Document Set] เมื่อกด Add Document Set ระบบไม่สามารถกดปุ่ม Save ได้}} \\
+    \item \textbf{{GISLOCK-7056 [Document Set] เมื่อกด Add Document Set ระบบไม่สามารถกดปุ่ม Save ได้}} \\
           เกิดจากการที่เราทำ action อื่นก่อนมา add เช่น update มันจำข้อมูลเดิม ทำให้ Save ไม่ได้ แก้ไขโดยการ reset ข้อมูลก่อนหน้า ก่อนจะ add เพื่อให้ข้อมูลเป็นอันปัจจุบัน
-    \item \textbf{\jiralink{GISLOCK-7096 [Prospect/Client][Contact Person] กดเลือก All Purpose ให้ระบบปิด Dropdown}} \\
+    \item \textbf{{GISLOCK-7096 [Prospect/Client][Contact Person] กดเลือก All Purpose ให้ระบบปิด Dropdown}} \\
           เมื่อเรากดเลือก All Purpose ให้ระบบปิด Dropdown
-    \item \textbf{\jiralink{GISLOCK-7154 [Country] ระบบไม่สามารถ Search ได้ และไม่สามารถ Delete ได้}} \\
+    \item \textbf{{GISLOCK-7154 [Country] ระบบไม่สามารถ Search ได้ และไม่สามารถ Delete ได้}} \\
           มี 2 กรณี คือ \\
           1. ไม่สามารถ Search ได้ สาเหตุมาจากที่หลังบ้านเราใช้ SQL ที่ผิด เดิมใช้ LIKE ที่ไม่มี \%\% ครอบ ทำให้ค้นหาไม่เจอ เราเลยเพิ่ม \%\% ครอบเข้าไป \\ 
           2. ไม่สามารถ Delete ได้ เพราะตอน get ข้อมูลมาไม่ได้เลขไอดีที่ตรงกับตัวที่จะลบ พอเรากด delete หน้าบ้านมันเลยไม่รู้ว่าต้องลบตัวไหน แก้ไขโดยการ get ไอดีมาด้วย แล้วสามารถ delete ได้ปกติ
@@ -46,23 +46,23 @@
 \subsubsection{CR}
 \begin{itemize}
     \setlength\itemsep{1em}
-    \item \textbf{\jiralink{GISLOCK-5176 [Partner Amendment] เพิ่ม Field Start Date}} \\
+    \item \textbf{{GISLOCK-5176 [Partner Amendment] เพิ่ม Field Start Date}} \\
           งานนนี้เป็นงานปรับปรุงจากอันเดิมคือในส่วนของหน้า Partner Amendment เราจะเพิ่มฟิลด์ Start Date เข้าไป
-    \item \textbf{\jiralink{GISLOCK-5769 [General Setup][Standard Code] แก้ไขหน้าจอตาม New Requirement}} \\
+    \item \textbf{{GISLOCK-5769 [General Setup][Standard Code] แก้ไขหน้าจอตาม New Requirement}} \\
           งานนนี้เป็นงานปรับปรุงจากอันเดิมคือในส่วนของหน้า Standard Code เราจะเพิ่มฟิลด์ Create By , Create Date , Update By , Update Date เข้าไป
-    \item \textbf{\jiralink{GISLOCK-5773 [General Setup][Document Running Format ] แก้ไขหน้าจอตาม New Requirement}} \\
+    \item \textbf{{GISLOCK-5773 [General Setup][Document Running Format ] แก้ไขหน้าจอตาม New Requirement}} \\
           งานนนี้เป็นงานปรับปรุงจากอันเดิมคือในส่วนของหน้า Document Running Format เราจะเพิ่มฟิลด์ Create By , Create Date , Update By , Update Date เข้าไป
-    \item \textbf{\jiralink{GISLOCK-5774 [General Setup][Document Running Sequence] แก้ไขหน้าจอตาม New Requirement}} \\
+    \item \textbf{{GISLOCK-5774 [General Setup][Document Running Sequence] แก้ไขหน้าจอตาม New Requirement}} \\
           งานนนี้เป็นงานปรับปรุงจากอันเดิมคือในส่วนของหน้า Document Running Sequence เราจะเพิ่มฟิลด์ Create By , Create Date , Update By , Update Date เข้าไป
-    \item \textbf{\jiralink{GISLOCK-5832 [Client][Partner] ระบบไม่สามารถ Preview File กรณีเป็น View Mode ได้}} \\
+    \item \textbf{{GISLOCK-5832 [Client][Partner] ระบบไม่สามารถ Preview File กรณีเป็น View Mode ได้}} \\
           งานนนี้เป็นงานปรับปรุงโดยการเพิ่มการ preview file ใน view mode เขาไป
-    \item \textbf{\jiralink{GISLOCK-7065 [LWT Bank Account] แก้ไขโปรแกรมตาม New Requirement}} \\
+    \item \textbf{{GISLOCK-7065 [LWT Bank Account] แก้ไขโปรแกรมตาม New Requirement}} \\
           ปรับจากเดิมที่เป็น Modal มาเป็นหน้า page งานนี้เป็นการทำหน้า Ui ของ LWT Bank Account
-    \item \textbf{\jiralink{GISLOCK-7098 [New Prospect/Client][New Partner] กรณีเลือก All Purpose ให้ Disable ตัวเลือกอื่นๆ}} \\
+    \item \textbf{{GISLOCK-7098 [New Prospect/Client][New Partner] กรณีเลือก All Purpose ให้ Disable ตัวเลือกอื่นๆ}} \\
           งานนนี้เป็นงานปรับปรุงจากอันเดิมคือในส่วนของ Contact จะมี Dropdown ที่เลือก Purpose กรณีที่เราเลือก "All Purpose" เราจะ Disable ฟิลด์อื่นแล้วก็ปิด Dropdown
-    \item \textbf{\jiralink{GISLOCK-7223 [Prospect/Client] เพิ่มข้อมูลสถานะเกี่่ยวกับการบันทึกข้อมูล Prospcet/Client}} \\
+    \item \textbf{{GISLOCK-7223 [Prospect/Client] เพิ่มข้อมูลสถานะเกี่่ยวกับการบันทึกข้อมูล Prospcet/Client}} \\
           เพิ่ม Field ของ Entry By , Entry Date , Modification By , Modification Date ที่หน้าของ New Client , Client Amendment , Transfer Prospect to Client
-    \item \textbf{\jiralink{GISLOCK-7224 [Partner] เพิ่มข้อมูลสถานะเกี่่ยวกับการบันทึกข้อมูล Partner \& Market Security}} \\
+    \item \textbf{{GISLOCK-7224 [Partner] เพิ่มข้อมูลสถานะเกี่่ยวกับการบันทึกข้อมูล Partner \& Market Security}} \\
           เพิ่ม Field ของ Entry By , Entry Date , Modification By , Modification Date ที่หน้าของ New Partner , Partner Amendment , Market Security 
 \end{itemize}
 
